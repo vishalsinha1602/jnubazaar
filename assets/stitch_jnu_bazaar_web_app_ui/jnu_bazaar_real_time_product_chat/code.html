@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JNU Bazaar - Messages &amp; Campus Exchange</title>
+<!-- Material Symbols Outlined font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Inter Google Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed-dim": "#b4c5ff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#9cf2e8",
+            "tertiary-container": "#996100",
+            "secondary-container": "#99efe5",
+            "error": "#ba1a1a",
+            "surface-tint": "#0053db",
+            "surface-container-highest": "#dce2f7",
+            "tertiary-fixed": "#ffddb8",
+            "tertiary": "#784b00",
+            "surface-container": "#e9edff",
+            "on-surface-variant": "#434655",
+            "on-primary-fixed": "#00174b",
+            "on-error-container": "#93000a",
+            "inverse-on-surface": "#edf0ff",
+            "outline": "#737686",
+            "on-secondary-fixed-variant": "#00504a",
+            "error-container": "#ffdad6",
+            "primary-container": "#2563eb",
+            "surface-variant": "#dce2f7",
+            "on-error": "#ffffff",
+            "on-surface": "#141b2b",
+            "primary-fixed": "#dbe1ff",
+            "secondary": "#006a63",
+            "on-primary-container": "#eeefff",
+            "surface-bright": "#f9f9ff",
+            "on-secondary-container": "#006f67",
+            "surface": "#f9f9ff",
+            "outline-variant": "#c3c6d7",
+            "tertiary-fixed-dim": "#ffb95f",
+            "surface-container-high": "#e1e8fd",
+            "on-primary": "#ffffff",
+            "primary": "#004ac6",
+            "inverse-primary": "#b4c5ff",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed": "#2a1700",
+            "surface-dim": "#d3daef",
+            "on-primary-fixed-variant": "#003ea8",
+            "surface-container-low": "#f1f3ff",
+            "secondary-fixed-dim": "#80d5cb",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#293040",
+            "on-tertiary-fixed-variant": "#653e00",
+            "on-secondary-fixed": "#00201d",
+            "background": "#f9f9ff",
+            "on-tertiary-container": "#ffeedd",
+            "on-background": "#141b2b"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-desktop": "2rem",
+            "space-xl": "2rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem",
+            "gutter-desktop": "1.5rem",
+            "margin": "1rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-sm": ["Inter"],
+            "label-sm": ["Inter"],
+            "display": ["Inter"],
+            "headline-lg-mobile": ["Inter"],
+            "body-lg": ["Inter"],
+            "label-md": ["Inter"],
+            "headline-md": ["Inter"],
+            "body-md": ["Inter"],
+            "price-display": ["Inter"],
+            "headline-lg": ["Inter"],
+            "label-lg": ["Inter"]
+          },
+          "fontSize": {
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "price-display": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+    /* Custom scrollbars for clean UI */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c3c6d7;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #737686;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TOP APP BAR -->
+<header class="w-full bg-surface-container-lowest border-b border-outline-variant shadow-sm sticky top-0 z-50">
+<div class="w-full px-gutter-desktop mx-auto max-w-[1280px] flex items-center justify-between h-16 gap-4">
+<!-- Brand & Search cluster -->
+<div class="flex items-center gap-6 flex-1 max-w-2xl">
+<!-- Logo -->
+<a class="font-headline-md text-headline-md font-bold text-primary tracking-tight whitespace-nowrap flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="storefront">storefront</span>
+<span>JNU Bazaar</span>
+</a>
+<!-- Campus Search Bar -->
+<div class="relative w-full max-w-md hidden sm:block">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-lg" data-icon="search">search</span>
+</div>
+<input class="w-full pl-9 pr-12 py-2 bg-surface-container-lowest border border-outline-variant rounded-lg text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-transparent transition-all" placeholder="Search books, cycles, electronics across JNU hostels..." type="text"/>
+<div class="absolute inset-y-0 right-0 pr-2 flex items-center">
+<span class="font-label-sm text-label-sm text-outline px-1.5 py-0.5 border border-outline-variant rounded bg-surface-container-low">⌘K</span>
+</div>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-6">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors pb-1 font-label-lg text-label-lg" href="#">Home</a>
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-label-lg text-label-lg" href="#">Marketplace</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors pb-1 font-label-lg text-label-lg" href="#">Sell Product</a>
+</nav>
+<!-- Trailing Action Cluster -->
+<div class="flex items-center space-x-3">
+<!-- Wishlist -->
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors relative" title="Wishlist">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full ring-2 ring-surface-container-lowest"></span>
+</button>
+<!-- Notifications -->
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors relative" title="Notifications">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1 right-1 bg-primary text-on-primary font-label-sm text-[10px] w-4 h-4 rounded-full flex items-center justify-center">3</span>
+</button>
+<!-- Sell an Item CTA Button -->
+<button class="hidden lg:flex items-center gap-1.5 bg-primary-container hover:bg-primary text-on-primary px-3.5 py-2 rounded-lg font-label-lg text-label-lg transition-colors shadow-sm">
+<span class="material-symbols-outlined text-lg" data-icon="add_circle">add_circle</span>
+<span>Sell an Item</span>
+</button>
+<!-- User Avatar -->
+<div class="flex items-center gap-2 pl-2 border-l border-outline-variant">
+<div class="relative">
+<img alt="Avatar of verified JNU student Aarav Sharma" class="w-9 h-9 rounded-full object-cover border border-outline-variant shadow-sm" data-alt="Close-up headshot of Aarav Sharma, a confident Indian male graduate student at Jawaharlal Nehru University wearing a navy blue collared shirt with soft natural lighting and library bookshelves in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6lXvyWOSoRbn68rZgsw8gq3l7OIdn6qwRUvs2dpQbqkmlKbSNQcH_QQW91l48EHqHRkPbdBUUVZypddJv70xeTkYJQsWo_GJ4suP_U0vJFAAI__yqNZq7wwpQi03AWK0i9iExdTCSlloWYC5ZzFesjbHI0IWso7JQ0ZxUrWTFl9nsSZZsxLSIBF3S1RzSWTqa9eG4lVnPpaT2gJNCG_f098pAg3FuT3hUr0MYsru1B8iSYh8UQu07xA"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-secondary rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="hidden xl:flex flex-col text-left">
+<span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Aarav S.</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Brahmaputra</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- BREADCRUMB & CONTEXT HEADER -->
+<div class="w-full bg-surface-container-lowest border-b border-outline-variant">
+<div class="max-w-[1280px] mx-auto px-gutter-desktop py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="home">home</span>
+<span>Home</span>
+</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Messages</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>
+          Chat with Rohan K.
+          <span class="font-label-sm text-label-sm text-outline-variant font-normal hidden sm:inline">(Oxford Companion to Politics)</span>
+</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="hidden md:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="verified_user">verified_user</span>
+          Campus P2P Safe Desk Enabled
+        </span>
+</div>
+</div>
+</div>
+<!-- MAIN CHAT CANVAS -->
+<main class="flex-1 max-w-[1280px] w-full mx-auto px-gutter-desktop py-4 flex flex-col">
+<!-- 3-Column Messenger Container -->
+<div class="w-full flex-1 bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm overflow-hidden flex flex-col lg:flex-row min-h-[680px] max-h-[calc(100vh-140px)]">
+<!-- COLUMN 1: CONVERSATIONS LIST SIDEBAR -->
+<aside class="w-full lg:w-80 xl:w-88 border-b lg:border-b-0 lg:border-r border-outline-variant flex flex-col bg-surface-container-lowest">
+<!-- Sidebar Search -->
+<div class="p-3.5 border-b border-outline-variant space-y-3">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span>Messages</span>
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full">4 Active</span>
+</h2>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors" title="Message Settings">
+<span class="material-symbols-outlined text-lg" data-icon="tune">tune</span>
+</button>
+</div>
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-base" data-icon="search">search</span>
+<input class="w-full pl-9 pr-3 py-1.5 bg-surface-container-low border border-outline-variant rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="Search chats or listings..." type="text"/>
+</div>
+</div>
+<!-- Filter Tabs -->
+<div class="flex items-center px-3 py-2 border-b border-outline-variant gap-1.5 overflow-x-auto text-label-sm font-label-sm no-scrollbar">
+<button class="px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container whitespace-nowrap font-semibold">
+            All Messages (4)
+          </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container whitespace-nowrap transition-colors">
+            Buying (3)
+          </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container whitespace-nowrap transition-colors">
+            Selling (1)
+          </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container whitespace-nowrap transition-colors">
+            Unread
+          </button>
+</div>
+<!-- Conversation Rows (Scrollable) -->
+<div class="flex-1 overflow-y-auto divide-y divide-surface-container-low">
+<!-- Conversation 1 (Active) -->
+<div class="p-3.5 bg-surface-container-high/60 border-l-4 border-primary-container cursor-pointer transition-colors relative">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img alt="Avatar of Rohan K." class="w-11 h-11 rounded-full object-cover border border-outline-variant" data-alt="Portrait photo of Rohan K, a 25-year-old Indian male doctoral scholar wearing glasses and a maroon pullover, smiling calmly with scholarly institutional background lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmdlts32klp1N8Tzz3IJ1m_1erFvullNS4L4yu4fm2QTcBHMecQ-R8jPXWAm6jtYpXzxsLSqb9hR9soaYccoHRSfmGYkl88us4f5W_1Ixwp2OFmMUp2YgllmCOhhJRMrgsuqGd7k_VkhvI4hL-WIwaMZ67abimaZ85syi45pr2C6uvcHkBODughLpMYfGveIpZgCxX9sbkwoJRyV8AhgYaCIWMIRWxPN9ckEl74PS-GSweXyJKbQoKBg"/>
+<span class="absolute bottom-0 right-0 w-3 h-3 bg-secondary rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline justify-between mb-0.5">
+<div class="flex items-center gap-1.5 truncate">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface truncate">Rohan K.</span>
+<span class="font-label-sm text-[10px] text-secondary bg-secondary-container/50 px-1 py-0.2 rounded font-medium">SIS PhD</span>
+</div>
+<span class="font-label-sm text-[11px] text-primary-container font-semibold">2m ago</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface font-medium text-xs mb-1 truncate">
+<span class="material-symbols-outlined text-xs text-outline" data-icon="book">book</span>
+<span class="truncate">Oxford Companion to Politics</span>
+<span class="text-tertiary font-bold ml-auto shrink-0">₹380</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-body-md text-xs text-on-surface truncate pr-2">Can we meet outside Central Library around 5 PM?</p>
+<span class="shrink-0 w-4 h-4 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px] flex items-center justify-center font-bold">1</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Conversation 2 -->
+<div class="p-3.5 hover:bg-surface-container-low cursor-pointer transition-colors">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img alt="Avatar of Priya R." class="w-11 h-11 rounded-full object-cover border border-outline-variant" data-alt="Portrait photo of Priya R, a young Indian female student in a mustard yellow kurti with warm soft natural lighting in an academic campus courtyard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD26_b4xlLCKvrhoYNe8IEajCUKKomeu40cv17pgKtOA-BIym_xrP-Z9y2t3KTL3bb1q8VmSnwnWoYAzzpnyv87WkGMeaPoYlSxSTWY0ZrgBf9dl3d8DtLEPG2Wcd33Vr80L3nLUuiApnujMm05VBRnGRwiO0ePQMTFsIriBbFAT_av4bfM11tR9O4bY_5pNWSBHm_1SDAiEit2srXR1Ilp4ZXoGBpK5JszaRXmgYm6Nz3Xr08K4ccrQ"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-outline rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline justify-between mb-0.5">
+<div class="flex items-center gap-1.5 truncate">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface truncate">Priya R.</span>
+<span class="font-label-sm text-[10px] text-outline px-1 py-0.2 rounded bg-surface-container font-medium">M.A. Arts</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline">1h ago</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant text-xs mb-1 truncate">
+<span class="material-symbols-outlined text-xs text-outline" data-icon="pedal_bike">pedal_bike</span>
+<span class="truncate">Hercules Roadeo A50 Bicycle</span>
+<span class="text-on-surface font-semibold ml-auto shrink-0">₹3,800</span>
+</div>
+<p class="font-body-md text-xs text-outline truncate">Is the price negotiable?</p>
+</div>
+</div>
+</div>
+<!-- Conversation 3 -->
+<div class="p-3.5 hover:bg-surface-container-low cursor-pointer transition-colors">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img alt="Avatar of Amit Verma" class="w-11 h-11 rounded-full object-cover border border-outline-variant" data-alt="Portrait of Amit Verma, an Indian male university scholar wearing casual cotton t-shirt with clean campus hostel veranda background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0vmUeCq7Qo-Fa0o_p_DOTMj1Abrq3_b7X-UVTKztQVda7s_XS5YObdaUgg5lcP28_ECae_O5oNp-NKfrOjb5pLxMA228_nEVTbqg7TvsRqCxO3M9kHEhsPqgegWDvKU0CC7kiiOF0449xDT0gytSk9JLcXES-dsQqqGS0N4Arr4m-wunDwBcwbzGmqLsRKSlV6-HwWVYljV34LbhkBQq4gLQV7xjqatj1K7UQCkToKhC110583_aZdw"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-outline rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline justify-between mb-0.5">
+<div class="flex items-center gap-1.5 truncate">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface truncate">Amit Verma</span>
+<span class="font-label-sm text-[10px] text-outline px-1 py-0.2 rounded bg-surface-container font-medium">Kaveri</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline">Yesterday</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant text-xs mb-1 truncate">
+<span class="material-symbols-outlined text-xs text-outline" data-icon="mode_fan">mode_fan</span>
+<span class="truncate">Bajaj Majesty Pedestal Fan</span>
+<span class="text-on-surface font-semibold ml-auto shrink-0">₹1,050</span>
+</div>
+<div class="flex items-center gap-1 text-xs text-secondary font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="bookmark">bookmark</span>
+<p class="truncate">Marked as reserved for you</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Conversation 4 -->
+<div class="p-3.5 hover:bg-surface-container-low cursor-pointer transition-colors opacity-80">
+<div class="flex items-start gap-3">
+<div class="relative shrink-0">
+<img alt="Avatar of Tenzin W." class="w-11 h-11 rounded-full object-cover border border-outline-variant" data-alt="Portrait photo of Tenzin W, a cheerful Tibetan student at JNU wearing a dark green collegiate jacket with warm sunlit campus background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd6TlqLN20h7QuOiKLZ1pnvlJnHev3KCeR4eTHQRBDsc6av8VZr4ux9z2ZKFaJCwwmn2lzF8bCjJWamVjDWg3e6NyTbl46OZjH0nojRzkT1DLtIUF3JVxDUi6Xg3KpphOsgJFO7E8kZltx_aKJx2VsP9jWP2mgKfzK80ei-yny-m8K5I6OeD0GhhAOyZRzh7wkNMjo2BzeNTskANhdxLUOCjpMI8ikIaFrmPEZcyCfe3tQbY5DcSPukA"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline justify-between mb-0.5">
+<div class="flex items-center gap-1.5 truncate">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface truncate">Tenzin W.</span>
+<span class="font-label-sm text-[10px] text-outline px-1 py-0.2 rounded bg-surface-container font-medium">Mahi</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline">3d ago</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant text-xs mb-1 truncate">
+<span class="material-symbols-outlined text-xs text-outline" data-icon="table_restaurant">table_restaurant</span>
+<span class="truncate">Wooden Study Table</span>
+<span class="text-outline font-medium ml-auto shrink-0">₹1,400</span>
+</div>
+<div class="flex items-center gap-1 text-xs text-outline">
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="check_circle">check_circle</span>
+<p class="truncate">Thanks, deal completed!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Micro-Footer / Status -->
+<div class="p-3 border-t border-outline-variant bg-surface-container-low flex items-center justify-between text-label-sm font-label-sm text-outline">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            JNU Direct Campus P2P Network
+          </span>
+<span class="font-mono text-[11px]">v2.4-jnu</span>
+</div>
+</aside>
+<!-- COLUMN 2: CENTER CHAT AREA (Product discussion stream) -->
+<section class="flex-1 flex flex-col bg-surface-container-lowest min-w-0">
+<!-- Conversation Header -->
+<div class="px-4 py-3 border-b border-outline-variant bg-surface-container-lowest flex items-center justify-between gap-3 shadow-xs">
+<!-- Profile details -->
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative shrink-0">
+<img alt="Avatar of Rohan K." class="w-10 h-10 rounded-full object-cover border border-outline-variant" data-alt="Portrait photo of Rohan K, a 25-year-old Indian male doctoral scholar wearing glasses and a maroon pullover, smiling calmly with scholarly institutional background lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBje5tOSxS6IqXu5qqrwcYkK7i2Ub8RoWc8wuDRQhStWLtbkz89ai5SVpT6clKv5em7AiIFDpYX3zd1PtByZg_MScFcGl5gU2kFKEmAAZxxha_1Gl6XNs678pfqXJMUeTdTvp_AFFyIM2tmuYIkqHp15IRXhQ23XM60JJV6ZVfV7uuTL8jmSYlvaXKjpi_TlUktUTI4hwJLM7MX43XGhAzxIdUjRZmg9UtEYLYIqgXio-2HhVcKx9qGhw"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-secondary rounded-full ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Rohan K.</span>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[11px] font-semibold bg-secondary-container text-on-secondary-container" title="Institutional Email Verified">
+<span class="material-symbols-outlined text-xs" data-icon="verified">verified</span>
+                  @jnu.ac.in Verified
+                </span>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-outline truncate">
+<span>Centre for Political Studies, SSS / SIS</span>
+<span>•</span>
+<span class="text-secondary font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Online (Replies in ~15m)
+                </span>
+</div>
+</div>
+</div>
+<!-- Header Quick Utility Actions -->
+<div class="flex items-center gap-1 shrink-0">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container-low rounded-lg transition-colors" title="Call / Audio for Campus Sync">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors hidden sm:inline-flex" title="Propose Meeting Landmark">
+<span class="material-symbols-outlined" data-icon="pin_drop">pin_drop</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors" title="More Chat Options">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Pinned Listing Quick Bar at top of Chat -->
+<div class="px-4 py-2.5 bg-surface-container-low/70 border-b border-outline-variant flex items-center justify-between gap-3 flex-wrap sm:flex-nowrap">
+<div class="flex items-center gap-3 min-w-0">
+<img alt="Oxford Companion to Politics Book Cover" class="w-11 h-13 object-cover rounded-md border border-outline-variant shrink-0" data-alt="High resolution studio photography of The Oxford Companion to Politics hardcover textbook, crisp navy and gold lettering, placed on clean wooden academic study desk in warm campus library lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVhbFSpdxGGVCPivgM8f_0VDHbdlet53wHvSEwzW6mubn3bhIe0SU7i3uq6It8S-742t0VsUYxsTI7kXbWPqEV9lIwjRQW4WbcvvzJoOmBODM26g91ssaHE-hYzfFR8s8L32rLEsZNWWObkwMI0Lz5nsEUVbhSdH5WFUh7yhMGWFqHR01_5YMqSIW_cM2Wr9U8jRMDkusfcH4_dDG_kbpVmrBqFK1H3WtbZLClYnrdIxPNI5vjFx-SoQ"/>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface truncate">Oxford Companion to Politics (Hardcover 2nd Ed)</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-[11px] bg-secondary-container text-on-secondary-container font-semibold shrink-0">Like New</span>
+</div>
+<div class="flex items-center gap-3 text-xs text-outline mt-0.5">
+<span class="font-bold text-on-surface font-price-display text-sm text-tertiary">₹380 <span class="text-xs font-normal text-outline">(Fixed)</span></span>
+<span>•</span>
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="location_on">location_on</span>
+                  SIS Building / Central Library
+                </span>
+</div>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-2 shrink-0 ml-auto sm:ml-0">
+<button class="px-3 py-1.5 bg-surface-container-lowest hover:bg-surface-container border border-outline-variant text-on-surface text-label-md font-label-md rounded-lg transition-colors">
+              View Listing
+            </button>
+<button class="px-3 py-1.5 bg-primary-container hover:bg-primary text-on-primary text-label-md font-label-md rounded-lg transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="handshake">handshake</span>
+              Make an Offer
+            </button>
+</div>
+</div>
+<!-- Campus Trust & Safety Banner -->
+<div class="px-4 py-2 bg-amber-50/70 border-b border-amber-200/60 flex items-start gap-2.5 text-xs text-amber-900">
+<span class="material-symbols-outlined text-amber-700 text-base mt-0.5 shrink-0" data-icon="shield">shield</span>
+<p class="leading-relaxed">
+<strong class="font-semibold text-amber-950">Campus Safety Advice:</strong> Always meet at designated public campus spots (Central Library, KC Market, Ganga Dhaba). Never transfer advance cash before physically inspecting the book.
+          </p>
+</div>
+<!-- Message Thread Stream -->
+<div class="flex-1 overflow-y-auto p-4 space-y-4 bg-surface/40">
+<!-- Date Separator -->
+<div class="flex items-center justify-center my-2">
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-sm text-label-sm rounded-full border border-outline-variant shadow-xs">
+              Today, October 24
+            </span>
+</div>
+<!-- Buyer Message (Aarav S. / User) -->
+<div class="flex justify-end gap-2 items-end">
+<div class="max-w-md lg:max-w-lg bg-primary-container text-on-primary rounded-2xl rounded-tr-xs px-4 py-2.5 shadow-sm">
+<p class="font-body-md text-body-md text-white">Hi Rohan, is this book still available? Does it have any highlighting, pen markings, or missing pages?</p>
+<div class="flex items-center justify-end gap-1 mt-1 text-white/80 font-label-sm text-[10px]">
+<span>4:42 PM</span>
+<span class="material-symbols-outlined text-xs" data-icon="done_all">done_all</span>
+</div>
+</div>
+</div>
+<!-- Seller Message (Rohan K.) -->
+<div class="flex justify-start gap-2.5 items-end">
+<img alt="Avatar of Rohan K." class="w-7 h-7 rounded-full object-cover border border-outline-variant shrink-0" data-alt="Portrait photo of Rohan K, a 25-year-old Indian male doctoral scholar wearing glasses and a maroon pullover, smiling calmly with scholarly institutional background lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBusg6TD561ifdjpArppOWoLsBA16tazPFARU9hCDMXIviA82JhTkrZfs5yvZRjbnBDV18GSE3lqvjOVYS7Ng_x98LKz0e8SKAbIbr7GSYffNravKkVsnnYD73ULJZf4LQUzmYgJS6QZQIEcHHvxk-ntSG8vxexs18wCS1RJ_Zh5FfzYt4skdJZlCctFkHSVu6cO9vQ-9C6VqkS-A3sthj1RfEzQfCjGx13BwRTo97w9zfMqWyP1hAZpA"/>
+<div class="max-w-md lg:max-w-lg bg-surface-container-lowest border border-outline-variant text-on-surface rounded-2xl rounded-tl-xs px-4 py-2.5 shadow-xs">
+<span class="font-label-sm text-[10px] text-outline font-semibold block mb-0.5">Rohan K. (Seller)</span>
+<p class="font-body-md text-body-md text-on-surface">Hey! Yes, it is available. It is in like-new condition, zero pencil marks or underlines. Barely opened during the last semester coursework.</p>
+<div class="flex items-center justify-end gap-1 mt-1 text-outline font-label-sm text-[10px]">
+<span>4:45 PM</span>
+</div>
+</div>
+</div>
+<!-- Buyer Message -->
+<div class="flex justify-end gap-2 items-end">
+<div class="max-w-md lg:max-w-lg bg-primary-container text-on-primary rounded-2xl rounded-tr-xs px-4 py-2.5 shadow-sm">
+<p class="font-body-md text-body-md text-white">Great! Would you be willing to meet today for handover? I can pay via UPI on spot.</p>
+<div class="flex items-center justify-end gap-1 mt-1 text-white/80 font-label-sm text-[10px]">
+<span>4:48 PM</span>
+<span class="material-symbols-outlined text-xs" data-icon="done_all">done_all</span>
+</div>
+</div>
+</div>
+<!-- Seller Message with Campus Landmark Pin -->
+<div class="flex justify-start gap-2.5 items-end">
+<img alt="Avatar of Rohan K." class="w-7 h-7 rounded-full object-cover border border-outline-variant shrink-0" data-alt="Portrait photo of Rohan K, a 25-year-old Indian male doctoral scholar wearing glasses and a maroon pullover, smiling calmly with scholarly institutional background lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7Ca7OJhVMdkHKnrZKLs8SpmxvSHGBI8uYaNvVTgjFKDCvA1qf7t7C4O0c78Z-2_x5THpQf-FlTvP1_tG4WlGYMVg2I_z2RPqn0znjwxkYwADRkUucb_YaOENCcun6YdOW0HgG-N0TSfOSvaM-NBf1LQjgk-me4nL_YFN-rzcXtDeWwnHuIz8CqYKH7rLBKt1adPitK0wnkSUCCzj-2LSeQmBD1JG6gvSIRAT-9Fe-1gv54yqujuET8w"/>
+<div class="max-w-md lg:max-w-lg space-y-2">
+<div class="bg-surface-container-lowest border border-outline-variant text-on-surface rounded-2xl rounded-tl-xs px-4 py-2.5 shadow-xs">
+<span class="font-label-sm text-[10px] text-outline font-semibold block mb-0.5">Rohan K. (Seller)</span>
+<p class="font-body-md text-body-md text-on-surface">Sure, I am at Central Library 2nd floor reading hall till 6 PM. Can we meet outside Central Library porch around 5 PM?</p>
+<div class="flex items-center justify-end gap-1 mt-1 text-outline font-label-sm text-[10px]">
+<span>4:51 PM</span>
+</div>
+</div>
+<!-- Campus Landmark Card Attachment -->
+<div class="bg-surface-container-lowest border border-secondary/40 rounded-xl p-3 flex items-center justify-between gap-3 shadow-xs">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-lg" data-icon="local_library">local_library</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface block">Central Library Main Porch</span>
+<span class="font-label-sm text-[11px] text-secondary font-medium">Safe Hub • 120m away from SIS</span>
+</div>
+</div>
+<button class="px-2.5 py-1 bg-surface-container-low hover:bg-surface-container-high rounded text-xs font-semibold text-primary transition-colors">
+                  Confirm Spot
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Campus Quick Suggestion Chips -->
+<div class="px-4 py-2 bg-surface-container-lowest border-t border-outline-variant/60 flex items-center gap-2 overflow-x-auto no-scrollbar">
+<span class="text-xs text-outline font-label-sm shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="auto_awesome">auto_awesome</span> Quick replies:
+          </span>
+<button class="px-3 py-1 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-full text-xs font-medium whitespace-nowrap transition-colors border border-outline-variant/60">
+            Yes, 5:00 PM works! 👍
+          </button>
+<button class="px-3 py-1 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-full text-xs font-medium whitespace-nowrap transition-colors border border-outline-variant/60">
+            Can we meet at KC Market instead?
+          </button>
+<button class="px-3 py-1 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-full text-xs font-medium whitespace-nowrap transition-colors border border-outline-variant/60 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-primary" data-icon="qr_code">qr_code</span>
+            Send UPI QR
+          </button>
+<button class="px-3 py-1 bg-surface-container-low hover:bg-surface-container text-on-surface rounded-full text-xs font-medium whitespace-nowrap transition-colors border border-outline-variant/60">
+            Share Contact Number
+          </button>
+</div>
+<!-- Rich Chat Input Bar -->
+<div class="p-3 bg-surface-container-lowest border-t border-outline-variant">
+<form class="flex items-center gap-2" onsubmit="event.preventDefault();">
+<!-- Action Icons -->
+<div class="flex items-center gap-0.5 text-outline">
+<button class="p-2 hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors" title="Attach photos or payment receipts" type="button">
+<span class="material-symbols-outlined text-xl" data-icon="attach_file">attach_file</span>
+</button>
+<button class="p-2 hover:text-primary hover:bg-surface-container-low rounded-lg transition-colors" title="Share Campus Landmark / GPS Pin" type="button">
+<span class="material-symbols-outlined text-xl" data-icon="add_location_alt">add_location_alt</span>
+</button>
+<button class="p-2 hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors hidden sm:inline-flex" title="Insert Emoji" type="button">
+<span class="material-symbols-outlined text-xl" data-icon="sentiment_satisfied">sentiment_satisfied</span>
+</button>
+</div>
+<!-- Text Input Field -->
+<div class="flex-1 relative">
+<input class="w-full pl-3.5 pr-10 py-2.5 bg-surface-container-low border border-outline-variant rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary-container focus:border-transparent transition-all" placeholder="Type a message to Rohan... (Press Enter to send)" type="text" value="Yes, 5:00 PM works! I will be wearing a navy blue jacket."/>
+</div>
+<!-- Primary Send Button -->
+<button class="h-10 px-4 bg-primary-container hover:bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm shrink-0" type="submit">
+<span class="hidden sm:inline font-semibold">Send</span>
+<span class="material-symbols-outlined text-lg" data-icon="send">send</span>
+</button>
+</form>
+<div class="flex items-center justify-between text-[11px] text-outline px-1 mt-1.5">
+<span>Lock: End-to-end peer encrypted campus exchange</span>
+<span class="hidden sm:inline">Use UPI or Cash upon physical inspection</span>
+</div>
+</div>
+</section>
+<!-- COLUMN 3: RIGHT DRAWER (Listing & Seller Verification Details) -->
+<aside class="hidden xl:flex w-80 border-l border-outline-variant flex-col bg-surface-container-low/50 overflow-y-auto">
+<!-- Header -->
+<div class="p-4 border-b border-outline-variant bg-surface-container-lowest flex items-center justify-between">
+<h3 class="font-headline-sm text-sm font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base text-primary" data-icon="info">info</span>
+            Exchange Details
+          </h3>
+<span class="font-label-sm text-[11px] text-secondary font-medium bg-secondary-container/40 px-2 py-0.5 rounded-full">Active Deal</span>
+</div>
+<div class="p-4 space-y-5">
+<!-- Product Card Snapshot -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-3 shadow-xs space-y-3">
+<div class="relative rounded-lg overflow-hidden border border-outline-variant bg-surface-container">
+<img alt="Oxford Companion to Politics product photo" class="w-full h-36 object-cover" data-alt="Detailed overhead photograph of the Oxford Companion to Politics book resting flat on a clean college desk beside spectacles and a spiral notebook in natural daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyRAPPmocYIB06FvXQ7G4DF2Ido4BSfOKaHOkvnVEeFX1FeOwuJ_RFWssoUsNLWDteHYCauprAHBRenPkESg0r4wZvmtBm9b8wYRYw3LYZ839mtwA7WKeTtX_ez32hyNJOVM4-ec95tXCYkpp1E7SlBmgvwZUq2p_jVpwt9SKm1IgKMmekdeAsfacDJg6bStDAgtS0xgP4Xux7ecZgBem7YpjvzgTYmhFLTEZQulQ8efte2ICGCVUvbQ"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-bold shadow-xs">
+                Like New (Mint)
+              </div>
+</div>
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-price-display text-price-display text-primary font-bold">₹380</span>
+<span class="text-xs text-outline line-through">MRP ₹995</span>
+</div>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface leading-snug">Oxford Companion to Politics</h4>
+<p class="font-body-md text-xs text-on-surface-variant mt-1">2nd Edition Hardcover. Prescribed for Political Systems &amp; Comparative Politics courses in SIS/SSS.</p>
+</div>
+<div class="pt-2 border-t border-surface-container-high space-y-1.5 text-xs text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span class="text-outline">Campus Zone:</span>
+<span class="font-medium text-on-surface">SIS / North Gate Hub</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Posted:</span>
+<span class="font-medium text-on-surface">3 days ago</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Payment:</span>
+<span class="font-medium text-on-surface">UPI / Cash at Handshake</span>
+</div>
+</div>
+<!-- Quick Action Deal Buttons -->
+<div class="pt-2 space-y-2">
+<button class="w-full py-2 bg-primary-container hover:bg-primary text-on-primary rounded-lg font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-1.5 shadow-xs">
+<span class="material-symbols-outlined text-base" data-icon="handshake">handshake</span>
+                Mark as Deal Agreed
+              </button>
+<button class="w-full py-2 bg-surface-container hover:bg-surface-container-high border border-outline-variant text-on-surface rounded-lg font-label-md text-label-md font-medium transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-base text-primary" data-icon="qr_code_2">qr_code_2</span>
+                Pay via UPI QR
+              </button>
+</div>
+</div>
+<!-- About the Seller Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-3.5 shadow-xs space-y-3">
+<span class="font-label-sm text-[11px] text-outline font-semibold uppercase tracking-wider block">Seller Profile</span>
+<div class="flex items-center gap-3">
+<img alt="Avatar of Rohan K." class="w-12 h-12 rounded-full object-cover border border-outline-variant" data-alt="Portrait photo of Rohan K, a 25-year-old Indian male doctoral scholar wearing glasses and a maroon pullover, smiling calmly with scholarly institutional background lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsmDTWyXaThgVnyFK9eKBh0MDOzuMJKZoLBgJKHLS2JBYim_t-wQMzeQQzTy6w5Gp-rcVjbSsCKaQVwRYLF9ISxT0SobrWqjijJM4c857SMwoW3deYMU5QZv0Cr0voEAYgm642ZUpnZrgpVXycpp_O5MWDCA6anb3n_Yp6WH_OO5RpKMiyj94akRfbMZpa3bC0JKsX6TKCAL-5sxae2Xn6tp-aGYcPcOGJnzHhuBbVS8XnYDdkuVdH4g"/>
+<div>
+<div class="flex items-center gap-1">
+<h5 class="font-label-lg text-label-lg font-bold text-on-surface">Rohan K.</h5>
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="verified">verified</span>
+</div>
+<p class="font-label-sm text-xs text-outline">PhD Scholar, CPS / SSS</p>
+<div class="flex items-center gap-1 text-xs text-amber-600 font-semibold mt-0.5">
+<span class="material-symbols-outlined text-xs fill-1" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9 / 5.0</span>
+<span class="text-outline font-normal">(18 reviews)</span>
+</div>
+</div>
+</div>
+<div class="bg-secondary-container/30 border border-secondary/20 rounded-lg p-2 text-xs space-y-1">
+<div class="flex items-center gap-1.5 text-secondary font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="badge">badge</span>
+<span>JNU Roll: 22/54/SS/041 (Verified)</span>
+</div>
+<div class="flex items-center gap-1.5 text-outline">
+<span class="material-symbols-outlined text-xs" data-icon="schedule">schedule</span>
+<span>Member since Aug 2023 • 14 sales</span>
+</div>
+</div>
+<!-- Recommended Safe Hubs Nearby -->
+<div>
+<span class="font-label-sm text-[11px] text-outline font-semibold block mb-2">Recommended Safe Hubs Nearby:</span>
+<ul class="space-y-1.5 text-xs">
+<li class="flex items-center justify-between p-1.5 bg-surface-container rounded-md">
+<span class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="videocam">videocam</span>
+                    Central Library Lobby
+                  </span>
+<span class="text-outline font-medium text-[10px]">CCTV Monitored</span>
+</li>
+<li class="flex items-center justify-between p-1.5 bg-surface-container rounded-md">
+<span class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="storefront">storefront</span>
+                    KC Market
+                  </span>
+<span class="text-outline font-medium text-[10px]">Open till 10 PM</span>
+</li>
+<li class="flex items-center justify-between p-1.5 bg-surface-container rounded-md">
+<span class="flex items-center gap-1 text-on-surface">
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="restaurant">restaurant</span>
+                    Tapti Canteen
+                  </span>
+<span class="text-outline font-medium text-[10px]">Busy Spot</span>
+</li>
+</ul>
+</div>
+<!-- Report & Block -->
+<div class="pt-2 border-t border-surface-container-high flex items-center justify-between text-xs text-outline">
+<button class="hover:text-error transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="flag">flag</span>
+                Report Listing
+              </button>
+<button class="hover:text-error transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="block">block</span>
+                Block User
+              </button>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- FOOTER -->
+<footer class="w-full bg-surface-container-low border-t border-outline-variant mt-8">
+<div class="w-full py-space-xl px-gutter-desktop max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between gap-6">
+<!-- Brand & Copyright -->
+<div class="max-w-md space-y-2">
+<div class="font-headline-sm text-headline-sm font-bold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xl" data-icon="storefront">storefront</span>
+<span>JNU Bazaar</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          © 2024 JNU Bazaar. Dedicated peer-to-peer campus exchange network for Jawaharlal Nehru University students, scholars, and faculty. Institutional email verification required.
+        </p>
+<div class="pt-2 flex items-center gap-2 text-xs text-secondary font-medium">
+<span class="material-symbols-outlined text-sm" data-icon="shield">shield</span>
+<span>Institutional Trust &amp; Safety Verified Environment</span>
+</div>
+</div>
+<!-- Footer Links Columns -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-6 font-label-md text-label-md">
+<div>
+<span class="font-semibold text-on-surface block mb-2">Marketplace</span>
+<ul class="space-y-1.5 text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Marketplace</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Categories</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sell on JNU Bazaar</a></li>
+</ul>
+</div>
+<div>
+<span class="font-semibold text-on-surface block mb-2">Safety &amp; Hubs</span>
+<ul class="space-y-1.5 text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Student Safety &amp; Guidelines</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Campus Pickup Hubs</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Help &amp; Support</a></li>
+</ul>
+</div>
+<div class="col-span-2 sm:col-span-1">
+<span class="font-semibold text-on-surface block mb-2">Compliance</span>
+<ul class="space-y-1.5 text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

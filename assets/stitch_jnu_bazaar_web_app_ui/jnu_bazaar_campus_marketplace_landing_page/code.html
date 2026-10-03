@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JNU Bazaar | Dedicated Campus Marketplace for Jawaharlal Nehru University</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Inter Google Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration matching Design Tokens -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-dim": "#d3daef",
+            "surface": "#f9f9ff",
+            "on-tertiary-fixed-variant": "#653e00",
+            "surface-container-lowest": "#ffffff",
+            "on-surface-variant": "#434655",
+            "outline": "#737686",
+            "secondary": "#006a63",
+            "surface-variant": "#dce2f7",
+            "secondary-fixed-dim": "#80d5cb",
+            "tertiary-container": "#996100",
+            "outline-variant": "#c3c6d7",
+            "tertiary": "#784b00",
+            "surface-tint": "#0053db",
+            "inverse-primary": "#b4c5ff",
+            "on-error-container": "#93000a",
+            "on-tertiary-fixed": "#2a1700",
+            "on-surface": "#141b2b",
+            "primary-fixed-dim": "#b4c5ff",
+            "on-primary-fixed-variant": "#003ea8",
+            "surface-container-high": "#e1e8fd",
+            "on-secondary-container": "#006f67",
+            "on-tertiary-container": "#ffeedd",
+            "on-primary-container": "#eeefff",
+            "secondary-fixed": "#9cf2e8",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed": "#00174b",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed": "#ffddb8",
+            "on-error": "#ffffff",
+            "tertiary-fixed-dim": "#ffb95f",
+            "surface-container-highest": "#dce2f7",
+            "primary-fixed": "#dbe1ff",
+            "on-background": "#141b2b",
+            "surface-container": "#e9edff",
+            "primary": "#004ac6",
+            "surface-container-low": "#f1f3ff",
+            "background": "#f9f9ff",
+            "on-secondary-fixed": "#00201d",
+            "on-primary": "#ffffff",
+            "inverse-surface": "#293040",
+            "primary-container": "#2563eb",
+            "secondary-container": "#99efe5",
+            "surface-bright": "#f9f9ff",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#00504a",
+            "inverse-on-surface": "#edf0ff",
+            "error": "#ba1a1a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2rem",
+            "margin-desktop": "2rem",
+            "gutter": "1rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter-desktop": "1.5rem",
+            "margin": "1rem"
+          },
+          "fontFamily": {
+            "display": ["Inter", "sans-serif"],
+            "label-lg": ["Inter", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "headline-lg-mobile": ["Inter", "sans-serif"],
+            "headline-lg": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "headline-sm": ["Inter", "sans-serif"],
+            "price-display": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "headline-md": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "price-display": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9ff;
+      color: #141b2b;
+      -webkit-font-smoothing: antialiased;
+    }
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-background text-on-surface flex flex-col">
+<!-- TOP APP BAR / NAVIGATION (Anchored from Shared Components JSON) -->
+<header class="w-full sticky top-0 z-50 bg-surface-container-lowest border-b border-outline-variant shadow-sm">
+<div class="max-w-[1280px] mx-auto px-gutter-desktop h-16 flex items-center justify-between gap-space-md">
+<!-- Brand Logo + Campus Badge -->
+<div class="flex items-center gap-3 shrink-0">
+<a class="flex items-center gap-2 group" href="#">
+<div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="storefront">storefront</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md font-bold text-primary tracking-tight leading-none">JNU Bazaar</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-medium tracking-wide">Campus Exchange</span>
+</div>
+</a>
+</div>
+<!-- Search Bar on Left (from Shared Component JSON spec) -->
+<div class="flex-1 max-w-lg relative">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline pointer-events-none" data-icon="search">search</span>
+<input class="w-full h-11 pl-10 pr-12 rounded-lg bg-surface-container-low border border-outline-variant text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search textbooks, cycles, coolers, lab coats in JNU..." type="text"/>
+<div class="absolute right-3 hidden sm:flex items-center pointer-events-none">
+<kbd class="px-1.5 py-0.5 text-[10px] font-semibold text-outline bg-surface-container rounded border border-outline-variant font-mono">⌘K</kbd>
+</div>
+</div>
+</div>
+<!-- Navigation Links (Exact Match: "Home" Active) -->
+<nav class="hidden lg:flex items-center space-x-6 shrink-0">
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-label-lg text-label-lg transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors pb-1 font-label-lg text-label-lg" href="#marketplace">Marketplace</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors pb-1 font-label-lg text-label-lg" href="#sell">Sell Product</a>
+</nav>
+<!-- Trailing Actions (Notifications, Favorites, Trailing Primary Button, Profile) -->
+<div class="flex items-center gap-3 shrink-0">
+<!-- Wishlist / Favorite Icon with Badge (JSON Trailing Icon) -->
+<button aria-label="Favorites" class="relative p-2 rounded-lg hover:bg-surface-container-low transition-colors duration-150 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="absolute top-1.5 right-1.5 w-4 h-4 bg-primary text-on-primary text-[10px] font-bold rounded-full flex items-center justify-center ring-2 ring-surface-container-lowest">3</span>
+</button>
+<!-- Notifications Icon with Badge (JSON Trailing Icon) -->
+<button aria-label="Notifications" class="relative p-2 rounded-lg hover:bg-surface-container-low transition-colors duration-150 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full ring-2 ring-surface-container-lowest"></span>
+</button>
+<!-- Trailing Primary Action (JSON: "Sell an Item") -->
+<button class="hidden md:inline-flex items-center gap-1.5 h-10 px-4 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-all active:scale-[0.99] shadow-sm">
+<span class="material-symbols-outlined text-base" data-icon="add_circle">add_circle</span>
+<span>Sell an Item</span>
+</button>
+<!-- User Verified Profile Avatar -->
+<div class="flex items-center gap-2.5 pl-2 border-l border-outline-variant">
+<div class="relative cursor-pointer">
+<img class="w-9 h-9 rounded-full object-cover border border-outline-variant" data-alt="Close up professional portrait of Aarav Sharma, a male Indian university student at Jawaharlal Nehru University wearing a navy blue collared shirt with warm natural lighting on a modern campus backdrop in soft focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC69ayVE4lOe8Syb2UULpd95iPO32ncin60qNJp9IL1j1Z5cx84awFDi1zPvuVtvNMcAq6OXJlg0X7ZWoPUUmD50KIaTu5FhLbMV0VgRTyfOn0lAJx1zhrg8VP7HcREyGBlHGJ9Dsptq8c1I221KgR4hHh9mY2sVcY_1Dfz2TN-xjkHMYH592OFRsJzcV-va52XHvLqTAdduA2VltUBaQRAA7HBC0_v6sUeq6UWNG3qpTF8-KP2IADLA"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-secondary text-on-secondary rounded-full flex items-center justify-center ring-2 ring-surface-container-lowest text-[9px] font-bold" title="Verified @jnu.ac.in Student">
+<span class="material-symbols-outlined text-[10px]" data-icon="verified">verified</span>
+</span>
+</div>
+<div class="hidden xl:flex flex-col text-left">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Aarav S.</span>
+<span class="text-[10px] px-1 py-0.2 bg-secondary-container text-on-secondary-container font-semibold rounded">Verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Brahmaputra Hostel</span>
+</div>
+<button aria-label="Account menu" class="text-outline hover:text-on-surface transition-colors p-1">
+<span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="flex-1">
+<!-- 1. HERO SECTION -->
+<section class="w-full bg-gradient-to-b from-surface-container-low/80 via-surface-container-lowest to-surface py-12 border-b border-outline-variant/60">
+<div class="max-w-[1280px] mx-auto px-gutter-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Hero Content (Left 7 Cols) -->
+<div class="lg:col-span-7 flex flex-col items-start">
+<!-- Campus Verification Pill -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high border border-outline-variant text-primary font-label-sm text-label-sm mb-5 shadow-sm">
+<span class="material-symbols-outlined text-base text-primary" data-icon="school">school</span>
+<span class="font-semibold">Official Peer-to-Peer Campus Marketplace</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface-variant">JNU New Delhi</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display text-display text-on-surface tracking-tight font-bold mb-4">
+              Buy &amp; Sell Within Your <br class="hidden sm:inline"/>
+<span class="text-primary underline decoration-secondary decoration-wavy decoration-2 underline-offset-8">JNU Community</span>
+</h1>
+<!-- Subhead -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-7">
+              Connect directly with fellow students, research scholars, and campus residents to exchange textbooks, cycles, room coolers, hostel furniture, and electronics safely.
+            </p>
+<!-- Call to Actions -->
+<div class="flex flex-wrap items-center gap-3.5 mb-8">
+<a class="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary active:scale-[0.99] transition-all shadow-sm" href="#marketplace">
+<span>Explore Marketplace</span>
+<span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface font-label-lg text-label-lg hover:bg-surface-container-low active:scale-[0.99] transition-all shadow-sm" href="#sell">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="add">add</span>
+<span>Sell Your Product</span>
+</a>
+</div>
+<!-- Quick Trust Badges -->
+<div class="pt-5 border-t border-outline-variant/80 w-full flex flex-wrap items-center gap-y-2 gap-x-6 text-label-sm font-label-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5 text-secondary font-medium">
+<span class="material-symbols-outlined text-base" data-icon="verified_user">verified_user</span>
+<span>Verified @jnu.ac.in IDs Only</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface font-medium">
+<span class="material-symbols-outlined text-base text-primary" data-icon="percent">percent</span>
+<span>Zero Platform Commission</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface font-medium">
+<span class="material-symbols-outlined text-base text-tertiary" data-icon="pin_drop">pin_drop</span>
+<span>Safe On-Campus Pickups (KC Market, Library, Hostels)</span>
+</div>
+</div>
+</div>
+<!-- Hero Right Preview Component: Realistic Campus Marketplace Board (5 Cols) -->
+<div class="lg:col-span-5">
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-md p-5 relative overflow-hidden">
+<div class="flex items-center justify-between pb-3.5 border-b border-outline-variant mb-4">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Trending on Campus Now</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Live Feed</span>
+</div>
+<!-- Compact Live Feed Rows -->
+<div class="space-y-3">
+<!-- Live Item 1 -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-surface hover:bg-surface-container transition-colors border border-outline-variant/50">
+<img class="w-14 h-14 rounded-lg object-cover border border-outline-variant shrink-0" data-alt="A durable matte black 21 speed mountain bicycle leaning against a clean hostel exterior brick wall at Jawaharlal Nehru University during a sunny afternoon, featuring red wheel accents and clean tires." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADdcA9JAa6s8cIvpwZFaWj32MP3FF8twkIXJWRe3LFRUT17n1z0dyvbktlYqzBRqe_0Ccsi6C8eC_bAgJUWNI2kEWHeHi5FXWntZR3dalsjW7P_qTHGkc7uFIpbHKvwwCkIIXmt4T-LHDmzLYeSzU-GaqbbbVZQH9mzL1l7uu5vRsjMfxegp_OfICqUSWLKDMa2Bu7au-ekDlQ2Od6Kc-bGHLBmgdLhX2kcpV5_N4x-9BgFW1TcUp4EQ"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h4 class="font-label-lg text-label-lg text-on-surface truncate">Hero Sprint 21-Speed Cycle</h4>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₹1,800</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-medium">Like New</span>
+<span class="font-label-sm text-label-sm text-outline truncate">• Mahi-Mandavi Hostel</span>
+</div>
+</div>
+</div>
+<!-- Live Item 2 -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-surface hover:bg-surface-container transition-colors border border-outline-variant/50">
+<img class="w-14 h-14 rounded-lg object-cover border border-outline-variant shrink-0" data-alt="Stack of political science academic guidebooks and UGC NET study reference papers laid neatly on a clean wooden study desk beside a student coffee mug under bright ambient room lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDumkjTb0JyUGVhu6fUQlH3LNEqIhTQlfTAaDCFXN4Gkjv2s7Iu-p7DAYF8vl-6YCvxHelxVGHqMEkNjvmsxYMO1Z_j_psAA_LyiLoB8tcVElvx8zUv1iAo5LyBSDCxOOUCSllGq32LPlHR5CbIxh9DWCgkfXhUi86OD11SeCywG43KOMYLQDFX28CG0dR0VE4HzQIVjPhLjni-cMuy4oyQgWvfQw6N-lYkxTX0QXJyERuMAN0ts0ojzw"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h4 class="font-label-lg text-label-lg text-on-surface truncate">UGC NET Political Science Guides</h4>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₹450</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-medium">Good Notes</span>
+<span class="font-label-sm text-label-sm text-outline truncate">• SIS Building / Library</span>
+</div>
+</div>
+</div>
+<!-- Live Item 3 -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-surface hover:bg-surface-container transition-colors border border-outline-variant/50">
+<img class="w-14 h-14 rounded-lg object-cover border border-outline-variant shrink-0" data-alt="Compact white Symphony portable room cooler placed inside a tidy college hostel dormitory room near a window with sunlight casting sharp reflections on its plastic grill." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHw4Eqruk5jIhLR1vaC9BNOGlYrH2uh6NBcvTFJKcEdoRe50Tnf9sdJWTtl-in9WlbgvQNyh5OUFL_24v7_cDzY3smaOLTQshGwFcurivhTOKFPl_GmJ-ClexqHR9lzafENbZ-lZTxoMkvHRYTPdI_RTEkILgu9-k-TaUxZC96HFhf50rUIOXL3Mz6HXb8N6ggPj-FmEBdS8S6Hrxy2-EH4_M-_Wx8uLlq1vaTaMGpbMLHc49PHE4GDw"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h4 class="font-label-lg text-label-lg text-on-surface truncate">Kenstar 35L Symphony Room Cooler</h4>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₹2,200</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-medium">Working 100%</span>
+<span class="font-label-sm text-label-sm text-outline truncate">• Kaveri Hostel</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro Banner at bottom of preview -->
+<div class="mt-4 pt-3 border-t border-outline-variant/70 flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="lock_clock">lock_clock</span>
+<span>Instant student-to-student handover</span>
+</div>
+<span class="text-outline">Updated 3m ago</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. BROWSE CAMPUS CATEGORIES -->
+<section class="py-12 bg-surface-container-lowest border-b border-outline-variant">
+<div class="max-w-[1280px] mx-auto px-gutter-desktop">
+<div class="flex items-end justify-between mb-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Browse Campus Categories</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Find whatever you need for your semester directly from senior peers</p>
+</div>
+<a class="hidden sm:inline-flex items-center gap-1 font-label-lg text-label-lg text-primary font-semibold hover:underline" href="#all-categories">
+<span>View All Categories</span>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- 8 Category Grid (Responsive 2 to 4 cols) -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+<!-- Category 1 -->
+<a class="group p-4 rounded-xl border border-outline-variant bg-surface hover:bg-surface-container-low hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-150 shadow-sm flex items-center gap-3.5" href="#">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="menu_book">menu_book</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors truncate">Books &amp; Study Material</h3>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">340+ items listed</p>
+</div>
+</a>
+<!-- Category 2 -->
+<a class="group p-4 rounded-xl border border-outline-variant bg-surface hover:bg-surface-container-low hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-150 shadow-sm flex items-center gap-3.5" href="#">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="pedal_bike">pedal_bike</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors truncate">Cycles &amp; Commute</h3>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">85+ items listed</p>
+</div>
+</a>
+<!-- Category 3 -->
+<a class="group p-4 rounded-xl border border-outline-variant bg-surface hover:bg-surface-container-low hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-150 shadow-sm flex items-center gap-3.5" href="#">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="mode_fan">mode_fan</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors truncate">Hostel Coolers &amp; Essentials</h3>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">140+ items listed</p>
+</div>
+</a>
+<!-- Category 4 -->
+<a class="group p-4 rounded-xl border border-outline-variant bg-surface hover:bg-surface-container-low hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-150 shadow-sm flex items-center gap-3.5" href="#">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="devices">devices</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors truncate">Electronics &amp; Gadgets</h3>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">95+ items listed</p>
+</div>
+</a>
+<!-- Category 5 -->
+<a class="group p-4 rounded-xl border border-outline-variant bg-surface hover:bg-surface-container-low hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-150 shadow-sm flex items-center gap-3.5" href="#">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="bed">bed</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors truncate">Room Furniture &amp; Mattresses</h3>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">62+ items listed</p>
+</div>
+</a>
+<!-- Category 6 -->
+<a class="group p-4 rounded-xl border border-outline-variant bg-surface hover:bg-surface-container-low hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-150 shadow-sm flex items-center gap-3.5" href="#">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="science">science</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors truncate">Lab Equipment &amp; Aprons</h3>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">44+ items listed</p>
+</div>
+</a>
+<!-- Category 7 -->
+<a class="group p-4 rounded-xl border border-outline-variant bg-surface hover:bg-surface-container-low hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-150 shadow-sm flex items-center gap-3.5" href="#">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="apparel">apparel</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors truncate">Winter Wear &amp; Fashion</h3>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">110+ items listed</p>
+</div>
+</a>
+<!-- Category 8 -->
+<a class="group p-4 rounded-xl border border-outline-variant bg-surface hover:bg-surface-container-low hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-150 shadow-sm flex items-center gap-3.5" href="#">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="draw">draw</span>
+</div>
+<div class="min-w-0">
+<h3 class="font-label-lg text-label-lg text-on-surface group-hover:text-primary transition-colors truncate">Stationery &amp; Art Supplies</h3>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">78+ items listed</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- 3. FEATURED / FRESH LISTINGS GRID -->
+<section class="py-14 bg-surface" id="marketplace">
+<div class="max-w-[1280px] mx-auto px-gutter-desktop">
+<!-- Section Header + Campus Hub Filter Tabs -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface">Fresh on Campus</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Verified listings uploaded within the last 48 hours across JNU sectors</p>
+</div>
+<!-- Micro Location Chips (Design System Specs) -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 hide-scrollbar">
+<button class="h-8 px-3.5 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="check">check</span>
+<span>All Campuses</span>
+</button>
+<button class="h-8 px-3.5 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md shrink-0 transition-colors">
+              Near Ganga/Yamuna
+            </button>
+<button class="h-8 px-3.5 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md shrink-0 transition-colors">
+              Near KC Market
+            </button>
+<button class="h-8 px-3.5 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md shrink-0 transition-colors">
+              Library Complex
+            </button>
+<button class="h-8 px-3.5 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md shrink-0 transition-colors">
+              Budget &lt; ₹1,000
+            </button>
+</div>
+</div>
+<!-- 8 Authentic Product Cards Grid (4 Columns on Desktop) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- PRODUCT CARD 1 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:border-primary/50 hover:shadow-md hover:-translate-y-1 transition-all duration-150 flex flex-col group">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A modern Firefox Target 26T mountain terrain bicycle in vibrant red and black, parked on the paved courtyard of Ganga Hostel JNU under bright morning daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUFhobyhh7D_3q4HGTcY_CJfbztnaBHUcCvzpVDA9oaiPAdoCGkvEex8cp4Awt_MONPltX_mlMAJW0WhmcR9G-Bq61pj29K9NmiNkAnsh2VwEHb-43ZLEkp7AIRXaivw7ggibhHd7LqQikM3yxXQHtg4MB-oHizqC6Sz-AHMsdlquZXMUtCaNQ9Wf-TC104AHaKBUX32Hiqn767jgDvww-DinEp5Wb55pYOE7xCMxV4hT0qdDlBxmDBw"/>
+<span class="absolute top-3 left-3 font-label-sm text-label-sm px-2 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-semibold shadow-xs">
+                Good Condition
+              </span>
+<button aria-label="Save item" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-error hover:scale-110 transition-all shadow-xs">
+<span class="material-symbols-outlined text-base" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-price-display text-price-display text-primary font-bold">₹3,400</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium bg-secondary-container/50 px-1.5 py-0.5 rounded">Fair Price</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">
+                  Firefox Target 26T MTB Cycle
+                </h3>
+<p class="font-body-md text-body-md text-outline line-clamp-1 mt-0.5">Includes front basket, mudguards &amp; lock</p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<img class="w-6 h-6 rounded-full object-cover border border-outline-variant" data-alt="Profile portrait of Priya R., a young female postgraduate scholar wearing round spectacles and an Indian ethnic kurta smiling in a university garden environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC1uhjHCHpDwfpRa_40CiNsvHubSdrryw7Yu74yTCapTooEcSTE9ER9W5c2KqVIpP_gJp4ORtUw417eKsoUzqsSLGt4yLBDszO1gVb9s2ZOs60t17HxwHyyV9WWhaAlfEytPrjo5vbBaNKljYMWW9nH7M-O2t6MmMTmmz5l0YVj7Tp_oH5aKioDco92kUg5n4kkRErjikfluHIyoipXbYkdtmTvXf18Hh0suoE4VqHf4_9FyG0O2u8Bg"/>
+<span class="text-on-surface font-medium truncate max-w-[90px]">Priya R. (M.A.)</span>
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="verified">verified</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span class="truncate">Ganga Hostel</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PRODUCT CARD 2 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:border-primary/50 hover:shadow-md hover:-translate-y-1 transition-all duration-150 flex flex-col group">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Hardcover edition of Oxford Companion to Politics in India sitting flat on a modern library wooden study carrel with crisp page edges and clean dust jacket." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcr4JdORmJoStpENb7oV8XV21Ag-CM005-qKhcDbgc59xYFuzP2RYJYn1MJPgsLvxGTOHRzqU8sxjQ3hBjP2hqUNvhlGbY3J1w2R6OTBJUFV9hG6w3LAbb3qMZyNc--h5D-NEVr8ZjAHC4OdTMhQ6eP7q6WdkS8gvMREJiN4QBK211cGtP4APCdzQ-CF0QXJyuzm5UvwcBlJ4AErBNluE5WM25-reD8W4k5f7XisJdMqlNTReg8gqO0w"/>
+<span class="absolute top-3 left-3 font-label-sm text-label-sm px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-semibold shadow-xs">
+                Like New
+              </span>
+<button aria-label="Save item" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-error hover:scale-110 transition-all shadow-xs">
+<span class="material-symbols-outlined text-base" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-price-display text-price-display text-primary font-bold">₹380</span>
+<span class="font-label-sm text-label-sm text-outline line-through">₹895 MRP</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">
+                  Oxford Companion to Politics
+                </h3>
+<p class="font-body-md text-body-md text-outline line-clamp-1 mt-0.5">Hardcover, zero pencil marks or underlines</p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<img class="w-6 h-6 rounded-full object-cover border border-outline-variant" data-alt="Portrait of Rohan Sen, a focused male PhD research scholar wearing a formal shirt with Jawaharlal Nehru University library bookshelves softly blurred in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS2J6qfXuPVwDS3e1aEzPsA_AoZpkqufJcvzySN_QIu7Ojo0cDFzHk6zCv29vsCHDUmfHn2OfAc4XerszGhvr46QnN2b7zBEoohINc-8pizZpNEGf4XmXYtjXuxZtvgEeo1TJm3yo9DlFKDvbozLXDy_Bte3XfVnXv0MyWXCOwZgBqowlPPdHhUTQQPTnwdGjpkqI-TSkZ_UJT9noJmEaaltarlseFrkdQ14hkkpnEunUUC1WTfIvavQ"/>
+<span class="text-on-surface font-medium truncate max-w-[90px]">Rohan (Ph.D.)</span>
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="verified">verified</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span class="truncate">SIS Building</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PRODUCT CARD 3 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:border-primary/50 hover:shadow-md hover:-translate-y-1 transition-all duration-150 flex flex-col group">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="White Bajaj PX97 Torque 36L room cooler with honeycomb cooling pads shown clean inside a well-ventilated hostel room with electrical cord neatly coiled." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpDT0MDh7O8H5F4Vwljyt4-kmlR3_TJKUVAvBc9VdvR-xNblzmxDW94vwEVMFq6VJZnRDZ-ztsAOVIJ_gjX09gYPz1bTuyHqbYUr1GtZSoKomO3r36-iaVaqH8o7ii8J0XDagoOUsAvsU_FitMCfGWRFy_4DjTv_SAhMGgj6FB_m1CFOSCTl1chpxaraiZQ73iADJaucH8beTUiputJZPkMRK7HZB24EUgJpxgtdf2OnHFdHwwPHIeLw"/>
+<span class="absolute top-3 left-3 font-label-sm text-label-sm px-2 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-semibold shadow-xs">
+                Good Condition
+              </span>
+<button aria-label="Save item" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-error hover:scale-110 transition-all shadow-xs">
+<span class="material-symbols-outlined text-base" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-price-display text-price-display text-primary font-bold">₹2,100</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium bg-secondary-container/50 px-1.5 py-0.5 rounded">Hostel Ready</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">
+                  Bajaj PX97 Torque 36L Cooler
+                </h3>
+<p class="font-body-md text-body-md text-outline line-clamp-1 mt-0.5">Purchased last summer, new pads installed</p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<img class="w-6 h-6 rounded-full object-cover border border-outline-variant" data-alt="Headshot of Amit Verma, an Indian male student smiling outdoors near JNU sports stadium wearing a sports polo shirt." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8BBdozmEa58KgaMPlK_rvaAGb-vBxt5DvmDGD5cr2qE9GhsEw9yzzk0Nr0I33zdJbGy4-5k5rnk5raVdm2CVxU9MVhOx7jHco3teVna1v6YD5oZD4KXZmHgVmqqyPGhWl1rjLC01B9DPoV5sKrkTGDCI5inFDG4oY-8K23zvKoUPSO28n0e99unXWJbK2j55HEmrFu894Ty2tCir35t8MzaXCa08EyJRpsQTsO6LK6w38NO4570fnjw"/>
+<span class="text-on-surface font-medium truncate max-w-[90px]">Amit Verma</span>
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="verified">verified</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span class="truncate">Kaveri Hostel</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PRODUCT CARD 4 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:border-primary/50 hover:shadow-md hover:-translate-y-1 transition-all duration-150 flex flex-col group">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Close up photograph of a Casio FX-991EX Classwiz scientific calculator with clear high resolution LCD display powered on atop a graph notebook." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVE7TZKH1RVFylIfoLsBKa2lceainG5amZ0BgpE3gzI_kgB5_GuxKbi8QmRBZC6QXrw-2Of6mp8640mzAZaM8eVal_qAacPNi6eD-JAqHCUAv2BLRRJpJ2EV5uoSe9PjqeU_TemV9vmXDYmBrdcFhFQcRfjn6iVB3u0E8Di5oMMN3fOm_NuoLHRkXxjowRvJaeMWsh8VSHMMCrqB8416K8_GyjJh_HVBBF7_b7t2BamXSVMeYZ8eAzNg"/>
+<span class="absolute top-3 left-3 font-label-sm text-label-sm px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-semibold shadow-xs">
+                Like New
+              </span>
+<button aria-label="Save item" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-error hover:scale-110 transition-all shadow-xs">
+<span class="material-symbols-outlined text-base" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-price-display text-price-display text-primary font-bold">₹750</span>
+<span class="font-label-sm text-label-sm text-outline">Original Box</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">
+                  Casio FX-991EX Scientific Calc
+                </h3>
+<p class="font-body-md text-body-md text-outline line-clamp-1 mt-0.5">Used for one semester in SLS physics course</p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<img class="w-6 h-6 rounded-full object-cover border border-outline-variant" data-alt="Friendly portrait of Sneha Nair, an Indian woman science student wearing a white lab coat outside the School of Life Sciences at JNU." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeid3MPAa2gEw_zrWQJXsnAySPHSJMUBoML_oimS3l8NQb8Vj2YVkJ5_M0uFCsChXrtjvsMx74l3xmubhb0wlg4_f6SEqh9pw-Zt0YftGq81VW49qDY88GWZIDyVampC1AD4I3ij6qdwnLvKYrVj1PEkvb7yqroKJu7A6zDyfbSQMFFmwtbPYMvOOou73CepFeyp9OCyne-G-sgjB_8HiWIgS-nCwnYFqljPz8197xY9ZGMC1E5xDslw"/>
+<span class="text-on-surface font-medium truncate max-w-[90px]">Sneha Nair</span>
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="verified">verified</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span class="truncate">SLS Labs</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PRODUCT CARD 5 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:border-primary/50 hover:shadow-md hover:-translate-y-1 transition-all duration-150 flex flex-col group">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Compact solid teak-finish wooden student study desk with two side shelves loaded with paper files inside a well lit student hostel accommodation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-BI0slsUp89qi1xeaGeoQxJqGBMSGrSV7XLnja27h9KVWPFb1q4QKxJl6kNpxWOem8JLTZ8aCx_LGyCylz-CseF9jeEMY1uVlPCLhDl1kZ6ZtLc0vRNy1JtHSzvLns_e6750MoFOj4SLO7B11x7fp1satGLqILheMHQ72ozMrDVqi8Z4czayaJyVKhatQCtuXQaf-nRmWt_LipIvgw8L6BDBpN8nwcJuhh_qlbUwlOM5rpbDvwHCvTQ"/>
+<span class="absolute top-3 left-3 font-label-sm text-label-sm px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface font-semibold shadow-xs">
+                Used - Sturdy
+              </span>
+<button aria-label="Save item" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-error hover:scale-110 transition-all shadow-xs">
+<span class="material-symbols-outlined text-base" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-price-display text-price-display text-primary font-bold">₹1,400</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium bg-secondary-container/50 px-1.5 py-0.5 rounded">Negotiable</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">
+                  Wooden Study Table + Bookshelf
+                </h3>
+<p class="font-body-md text-body-md text-outline line-clamp-1 mt-0.5">Disassembles easily for quick hostel moving</p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<img class="w-6 h-6 rounded-full object-cover border border-outline-variant" data-alt="Portrait of Tenzin W., a Tibetan student enrolled at Jawaharlal Nehru University wearing a knitted sweater in an autumn campus courtyard setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQBxgIeCEtViR2sGDAg4PXuMrlrX3ZpSCj5KXZ48TOYEAMoGRZLpVZ06Pp1alUxaKNDZBisSVktZe2lmpINQKsDKI1b0Yal3s-O8DbdKzKKSCEfkRWNKTLTJGfwpZ1GI2Y-Wcge_F3ed8r2iLQ3QzGHLCjQQJa8P8MMOCpLyLjeF0d4h4Y_Oal_Dlr_uQHbRA7TJrAlWwkck4Q6QcA-R__uK49d_oQ2l3izw5ducHowGojknM8Gcv2ig"/>
+<span class="text-on-surface font-medium truncate max-w-[90px]">Tenzin W.</span>
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="verified">verified</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span class="truncate">Mahi-Mandavi</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PRODUCT CARD 6 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:border-primary/50 hover:shadow-md hover:-translate-y-1 transition-all duration-150 flex flex-col group">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Compact Logitech wireless keyboard and optical mouse in pristine dark grey finish displayed on a white tabletop with fresh Duracell batteries alongside." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-pcDD41m9VKg6yeC_mSAe7XMtpDIpcIFNQEdc10XLAE1HroL0ShXyvBKE-eP9D6Ow3SPMZWCVSS6nw7zFfE4fc3bR-rciPsFADo2clWB6BN6f4hb0_6HXFqvDnG4HLy1JPAGHU5cmsBLh-WzWT-J6ZXA5tpf5mAK_8AXqY-lknDnBXrjoYiiFU_Q2uc1lzaUe7utWLy0e8NQRROMnkKoNv6BWg_qrYEN-N3w52Ngiy_8W9nCPEYkC-w"/>
+<span class="absolute top-3 left-3 font-label-sm text-label-sm px-2 py-0.5 rounded-md bg-secondary-container text-on-secondary-container font-semibold shadow-xs">
+                Like New
+              </span>
+<button aria-label="Save item" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-error hover:scale-110 transition-all shadow-xs">
+<span class="material-symbols-outlined text-base" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-price-display text-price-display text-primary font-bold">₹850</span>
+<span class="font-label-sm text-label-sm text-outline">USB Receiver inc.</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">
+                  Logitech MK240 Wireless Combo
+                </h3>
+<p class="font-body-md text-body-md text-outline line-clamp-1 mt-0.5">Smooth keys, used rarely for thesis typing</p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<img class="w-6 h-6 rounded-full object-cover border border-outline-variant" data-alt="Student photo of Devendra K., a male student smiling with hostel buildings of JNU behind him in soft afternoon sunshine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNmFsBifbXHFqfk05ROYDfo1Zsb2ezhGKICNGRgplK8T10LYRYWBiW_kkwZyddwLVXUhwYsakAg2dG3wtCydcY0vyMjLFINe7JFnUCtc1htB-KflLpyLw_fEUPMQHJQMZrWeKIwAHTbHYvd43smeN012el-0WUgFTLKUP-OtoWWSzdb2w-zpczKcgAwkM53-d7APwgBjSbaqwQLqpyMPybAcwBy9nkgTXv77WBQzPgLuLSVY8Ufxc5eQ"/>
+<span class="text-on-surface font-medium truncate max-w-[90px]">Devendra K.</span>
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="verified">verified</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span class="truncate">Tapti Hostel</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PRODUCT CARD 7 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:border-primary/50 hover:shadow-md hover:-translate-y-1 transition-all duration-150 flex flex-col group">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Prestige induction cooktop 1600 watt with glossy black crystal glass top, push button controls and stainless steel saucepan resting on it in a campus kitchen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqG5AB_Hp-Y0y0FITUVF_ttlbcH4eNLSCb5Tuywz-n58H_WlK1cYlpzi2AA3u7NpONPBekA52xf6NoXBNPBClizWxS8pwsLKkb4ClTmDiyUEaLfC7tqN5MhMVi1DOfLKxcvc8RG43LLvNuP4lx3dhxOPFk7CLlBpUdyy2-SwI7ra2EAfBmmZvcRPj7B3JmDd477CByqHXoFMF21LiNVSYQYxbYDHsM6s5uINEgrWdQig3oRIafFwlf7A"/>
+<span class="absolute top-3 left-3 font-label-sm text-label-sm px-2 py-0.5 rounded-md bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface font-semibold shadow-xs">
+                Good Condition
+              </span>
+<button aria-label="Save item" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-error hover:scale-110 transition-all shadow-xs">
+<span class="material-symbols-outlined text-base" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-price-display text-price-display text-primary font-bold">₹1,150</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium bg-secondary-container/50 px-1.5 py-0.5 rounded">Hostel Safe</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">
+                  Prestige Induction Cooktop 1600W
+                </h3>
+<p class="font-body-md text-body-md text-outline line-clamp-1 mt-0.5">Energy saver, auto voltage regulator</p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<img class="w-6 h-6 rounded-full object-cover border border-outline-variant" data-alt="Portrait of Ananya S., a female university student standing near the Jawaharlal Nehru University central library lawns on a sunny day." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-TYCJDFYVCWckG4xCNwBpuII28u6W1VITabTEawQK2LnIHwGXc6G7ZnGprhPjGU2IaMBwGnZbVszJEwE2A37P3SN2KXJ7Z6TmhMII_ji1MKByhmKdEkhRmsrBl9872qhzF2j7R5AP1RGbMJS598QIu3Ymko45CocWC_TuO_ylQwOGJjC0Fb5lVDBTQqxkD64idMoYqSaFmPk6fYRrXkkbYsHejg2hkunOdlfblr0GNWCglMkOivzsbg"/>
+<span class="text-on-surface font-medium truncate max-w-[90px]">Ananya S.</span>
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="verified">verified</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span class="truncate">Godavari Hostel</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PRODUCT CARD 8 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden hover:border-primary/50 hover:shadow-md hover:-translate-y-1 transition-all duration-150 flex flex-col group">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Durable 40-liter Quechua mountain hiking backpack in navy blue with grey straps and sturdy side bottle holders sitting upright on grass." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgczLDGRCVmvnUwZnHPkXUDSKbbfpwtegQAJPALN2ZYVIXcV29oHaBZA2NdjavIXC3fYV3L056MYP_5O10yWxgONmMyWWhgLO5PtZPjROnL8qJST110Wc0-Ws6q0Ur8vBD-8ApPdHmw_qECcfXYgh4KNHSnYDe4EiJ9_Otf-KoOuqGkuTL2rTvAQ6eTeyKI1FtedietMBwfgC2dSXMj-87ycMhg-bIGvtntlpHTXbgiIl2DB8N4j_60Q"/>
+<span class="absolute top-3 left-3 font-label-sm text-label-sm px-2 py-0.5 rounded-md bg-surface-container-high text-on-surface font-semibold shadow-xs">
+                Fair Condition
+              </span>
+<button aria-label="Save item" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-error hover:scale-110 transition-all shadow-xs">
+<span class="material-symbols-outlined text-base" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="p-4 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-price-display text-price-display text-primary font-bold">₹1,200</span>
+<span class="font-label-sm text-label-sm text-outline">Rain Cover inc.</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 group-hover:text-primary transition-colors">
+                  Quechua Hiking Backpack 40L
+                </h3>
+<p class="font-body-md text-body-md text-outline line-clamp-1 mt-0.5">Ergonomic padded back, great for field trips</p>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<img class="w-6 h-6 rounded-full object-cover border border-outline-variant" data-alt="Portrait of Farhan A., a young male scholar with trimmed beard wearing a casual jacket against the backdrop of Periyar hostel corridor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU157N9fQZyNVQtwnukOhhRz0szAmvifBTooVoz0l1GY57oaexbFD8PsVKc9CtWfFl_1biGX4DVyFjxruGGH_FZdIN8yDkFoNqEwCEjM87sN5Tc8__AzWEY-n5f-MhGNftPoA9Q6Qku0iYhwIZcKUc70d0NBJZSWvMjGNUr_MLL81L9bQq7GsDrZ_micgN9mEmFKBLgEUlJYXV3nwd1RuN7JJ9tSUhDszpNK_S-ARl6Ck70YF8VEw2ig"/>
+<span class="text-on-surface font-medium truncate max-w-[90px]">Farhan A.</span>
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="verified">verified</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+<span class="truncate">Periyar Hostel</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- View All Action Button -->
+<div class="mt-10 text-center">
+<button class="inline-flex items-center justify-center gap-2 h-11 px-8 rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface font-label-lg text-label-lg hover:bg-surface-container-low hover:border-primary/40 active:scale-[0.99] transition-all shadow-sm">
+<span>View All 850+ Campus Listings</span>
+<span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 4. HOW JNU BAZAAR WORKS (TRUST & SAFETY) -->
+<section class="py-14 bg-surface-container-lowest border-b border-outline-variant">
+<div class="max-w-[1280px] mx-auto px-gutter-desktop">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<span class="font-label-md text-label-md text-primary font-semibold tracking-wider">BUILT EXCLUSIVELY FOR JNU</span>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mt-1.5">Simple, Transparent Campus Exchange</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">No strangers, no shipping fees, no payment escrows. Just pure peer-to-peer trust within our secure campus boundary.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Step 1 -->
+<div class="p-6 rounded-xl bg-surface border border-outline-variant/70 relative">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-primary flex items-center justify-center font-headline-sm text-headline-sm font-bold mb-5">
+              1
+            </div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">Sign In With JNU Email</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Every buyer and seller verifies through their institutional <span class="font-semibold text-on-surface">@jnu.ac.in</span> email ID. Fake profiles and unauthorized outside brokers are strictly kept out.
+            </p>
+<div class="mt-4 flex items-center gap-2 text-secondary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-base" data-icon="shield">shield</span>
+<span>100% Institutional Authenticity</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-6 rounded-xl bg-surface border border-outline-variant/70 relative">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-primary flex items-center justify-center font-headline-sm text-headline-sm font-bold mb-5">
+              2
+            </div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">Find or List in 60 Seconds</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Snap photos with your phone, enter your price in ₹, select your hostel or school pickup point, and chat instantly via peer-to-peer campus messaging.
+            </p>
+<div class="mt-4 flex items-center gap-2 text-primary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-base" data-icon="bolt">bolt</span>
+<span>Zero Listing or Sale Commissions</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-6 rounded-xl bg-surface border border-outline-variant/70 relative">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-primary flex items-center justify-center font-headline-sm text-headline-sm font-bold mb-5">
+              3
+            </div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mb-2">Meet Safely at Campus Hubs</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Inspect the item in person at recommended high-footfall spots like KC Market, Central Library, or your hostel common room. Pay via UPI on the spot.
+            </p>
+<div class="mt-4 flex items-center gap-2 text-tertiary font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-base" data-icon="verified">verified</span>
+<span>Safe Handshake Verification</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. SELL BANNER / CAMPUS CALLOUT (Minimal High-Contrast) -->
+<section class="py-12 bg-surface" id="sell">
+<div class="max-w-[1280px] mx-auto px-gutter-desktop">
+<div class="rounded-2xl bg-surface-container-low border border-outline-variant p-8 md:p-10 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+<div class="max-w-xl">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-high text-primary font-label-sm text-label-sm mb-3 font-semibold">
+<span class="material-symbols-outlined text-sm" data-icon="campaign">campaign</span>
+<span>End of Semester Clearance</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+              Graduating or moving hostels? <br/>
+<span class="text-primary">Turn your unused campus gear into cash.</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+              Pass down textbooks, coolers, and cycles to arriving juniors rather than leaving them behind or selling to external scrap vendors at pennies on the rupee.
+            </p>
+</div>
+<div class="shrink-0 flex flex-col sm:flex-row items-center gap-3">
+<button class="h-11 px-6 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container active:scale-[0.99] transition-all shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="post_add">post_add</span>
+<span>List an Item Now - Free</span>
+</button>
+<a class="h-11 px-5 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-colors flex items-center justify-center" href="#guidelines">
+              Campus Guidelines
+            </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- GLOBAL FOOTER (Anchored from Shared Components JSON) -->
+<footer class="w-full bg-surface-container-low border-t border-outline-variant">
+<div class="max-w-[1280px] mx-auto py-space-xl px-gutter-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+<!-- Brand + Mission -->
+<div class="lg:col-span-2 pr-4">
+<div class="flex items-center gap-2 mb-3">
+<div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-lg" data-icon="storefront">storefront</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">JNU Bazaar</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 max-w-sm">
+            Dedicated peer-to-peer campus exchange network for Jawaharlal Nehru University students, scholars, and faculty. Institutional email verification required.
+          </p>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-secondary">
+<span class="material-symbols-outlined text-base" data-icon="verified_user">verified_user</span>
+<span>Exclusively for verified @jnu.ac.in domain users</span>
+</div>
+</div>
+<!-- Directory Links Col 1 -->
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface mb-3">Marketplace</h4>
+<ul class="space-y-2 font-label-md text-label-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Textbooks &amp; Notes</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Bicycles &amp; Commute</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Hostel Room Coolers</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Desks &amp; Mattresses</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Science &amp; Lab Kits</a></li>
+</ul>
+</div>
+<!-- Directory Links Col 2 -->
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface mb-3">Campus Zones</h4>
+<ul class="space-y-2 font-label-md text-label-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">KC Market Hub</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Central Library Lawns</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">North Gate Cluster</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Dakshinapuram Hostels</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Poorvanchal Complex</a></li>
+</ul>
+</div>
+<!-- Directory Links Col 3 (Trust & Policy) -->
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface mb-3">Safety &amp; Help</h4>
+<ul class="space-y-2 font-label-md text-label-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Student Safety &amp; Guidelines</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Campus Pickup Hubs</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Report Suspicious Activity</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar with Exact Shared Component JSON Copyright -->
+<div class="pt-6 border-t border-outline-variant/60 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+<p class="font-body-md text-body-md text-on-surface-variant text-xs">
+          © 2024 JNU Bazaar. Dedicated peer-to-peer campus exchange network for Jawaharlal Nehru University students, scholars, and faculty. Institutional email verification required.
+        </p>
+<div class="flex items-center gap-6 shrink-0 font-label-sm text-label-sm text-outline">
+<span>New Mehrauli Road, New Delhi 110067</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span>v2.4 Live Build</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

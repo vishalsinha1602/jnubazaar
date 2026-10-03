@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Post a Product for Sale - JNU Bazaar | Campus Peer Exchange</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms and Container Queries plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-on-surface": "#edf0ff",
+            "primary-fixed": "#dbe1ff",
+            "surface-container-low": "#f1f3ff",
+            "surface-tint": "#0053db",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#00174b",
+            "secondary-fixed": "#9cf2e8",
+            "primary-fixed-dim": "#b4c5ff",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed-variant": "#653e00",
+            "outline": "#737686",
+            "primary-container": "#2563eb",
+            "surface-dim": "#d3daef",
+            "outline-variant": "#c3c6d7",
+            "on-secondary-container": "#006f67",
+            "surface-variant": "#dce2f7",
+            "secondary": "#006a63",
+            "surface-container": "#e9edff",
+            "on-secondary-fixed": "#00201d",
+            "error-container": "#ffdad6",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#99efe5",
+            "on-surface-variant": "#434655",
+            "primary": "#004ac6",
+            "on-tertiary-container": "#ffeedd",
+            "surface-bright": "#f9f9ff",
+            "on-primary": "#ffffff",
+            "on-surface": "#141b2b",
+            "inverse-primary": "#b4c5ff",
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#dce2f7",
+            "tertiary-fixed-dim": "#ffb95f",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#293040",
+            "surface": "#f9f9ff",
+            "on-tertiary-fixed": "#2a1700",
+            "tertiary-fixed": "#ffddb8",
+            "tertiary": "#784b00",
+            "background": "#f9f9ff",
+            "surface-container-lowest": "#ffffff",
+            "on-background": "#141b2b",
+            "tertiary-container": "#996100",
+            "on-secondary-fixed-variant": "#00504a",
+            "secondary-fixed-dim": "#80d5cb",
+            "on-primary-fixed-variant": "#003ea8",
+            "surface-container-high": "#e1e8fd",
+            "on-primary-container": "#eeefff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "2rem",
+            "margin": "1rem",
+            "gutter-desktop": "1.5rem",
+            "margin-desktop": "2rem",
+            "gutter": "1rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-sm": ["Inter"],
+            "headline-lg-mobile": ["Inter"],
+            "headline-md": ["Inter"],
+            "headline-lg": ["Inter"],
+            "body-lg": ["Inter"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "display": ["Inter"],
+            "price-display": ["Inter"],
+            "body-md": ["Inter"],
+            "label-lg": ["Inter"]
+          },
+          "fontSize": {
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "display": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "price-display": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+    }
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- ================= TOP NAVIGATION BAR (ANCHOR COMPONENT) ================= -->
+<header class="w-full bg-surface-container-lowest sticky top-0 z-50 border-b border-outline-variant shadow-sm">
+<div class="w-full px-gutter-desktop mx-auto max-w-[1280px] flex items-center justify-between h-16 gap-4">
+<!-- Brand & Search cluster -->
+<div class="flex items-center gap-6 flex-1 max-w-2xl">
+<!-- Logo -->
+<a class="flex items-center gap-2 group flex-shrink-0" href="#">
+<div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">storefront</span>
+</div>
+<span class="font-headline-md text-headline-md font-bold text-primary tracking-tight">JNU Bazaar</span>
+</a>
+<!-- Search Bar (on_left) -->
+<div class="relative w-full max-w-md hidden sm:block">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[18px]">search</span>
+</div>
+<input class="w-full h-10 pl-9 pr-8 bg-surface-container-low text-on-surface text-body-md rounded-lg border border-outline-variant focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all placeholder:text-outline" placeholder="Search books, cycles, coolers, hostel essentials..." type="text"/>
+<div class="absolute inset-y-0 right-0 pr-2.5 flex items-center pointer-events-none">
+<span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-surface-variant text-on-surface-variant font-semibold">⌘K</span>
+</div>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors pb-1 font-label-lg text-label-lg" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors pb-1 font-label-lg text-label-lg" href="#">Marketplace</a>
+<!-- Active link: Sell Product -->
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 font-label-lg text-label-lg" href="#">Sell Product</a>
+</nav>
+<!-- Trailing Actions & Student Profile -->
+<div class="flex items-center gap-3">
+<button aria-label="Wishlist" class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors duration-150" type="button">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button aria-label="Notifications" class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors duration-150 relative" type="button">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span>
+</button>
+<!-- Trailing Primary Action -->
+<a class="hidden lg:inline-flex items-center gap-1.5 bg-primary-container text-on-primary hover:bg-primary font-label-lg text-label-lg px-3.5 py-2 rounded-lg transition-colors shadow-sm" href="#sell-form">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Sell an Item</span>
+</a>
+<div class="h-6 w-px bg-outline-variant mx-1 hidden sm:block"></div>
+<!-- Verified Student Profile Cluster -->
+<div class="flex items-center gap-2.5 pl-1 cursor-pointer">
+<img alt="Avatar of verified JNU student Aarav Sharma" class="w-8 h-8 rounded-full border border-secondary-fixed object-cover" data-alt="Close up photographic portrait of a smiling Indian male university student wearing a casual flannel shirt on a sunny campus background. Soft lighting, clean focus, natural collegiate look with authentic peer vibes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAMzXdJtexusLDk9ji0zTkHx0X5okfHKVCACUpQWD62qLdFzN0DIaQHmEUe80vE80Dpv1e0g1OUzqUGPsg8vNd9Mo15NrxkEZTHwwanQPpyBm8S4QrwY13DOVGZIAJu2kBfcw7nSv2fplAaA5T5d5ghGLOFoeSxTpb74qqwU-3K4SZisjbVNhMrmONrs8xLtxchmGqMq4vv_qvFZATT-W1w4i8w2NRsg16JjhQFV-LUUGlXZKAOoTfNw"/>
+<div class="hidden xl:flex flex-col text-left">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Aarav S.</span>
+<span class="material-symbols-outlined text-secondary text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="text-[11px] text-on-surface-variant leading-none">Brahmaputra Hostel</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- ================= MAIN CANVAS ================= -->
+<main class="flex-grow w-full max-w-[1280px] mx-auto px-margin md:px-gutter-desktop py-space-lg">
+<!-- Breadcrumb & Top Indicator -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-label-md font-label-md text-on-surface-variant mb-4">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Marketplace</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Sell Your Product</span>
+</nav>
+<!-- Page Header & Value Props Strip -->
+<div class="mb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-4 border-b border-outline-variant pb-6">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container/40 text-on-secondary-container text-label-sm font-label-sm mb-2 border border-secondary-fixed">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+<span>Institutional Email Verified Portal (@jnu.ac.in)</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">Post a Product for Sale</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5">
+          List your books, cycles, electronics, or room essentials for fellow JNU students. Institutional email verified listings only.
+        </p>
+</div>
+<!-- Trust metric badges -->
+<div class="flex flex-wrap items-center gap-3 bg-surface-container-lowest px-4 py-2.5 rounded-xl border border-outline-variant shadow-sm text-label-md font-label-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">timer</span>
+<span>Listing takes <strong>~90 sec</strong></span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">percent</span>
+<span><strong>0%</strong> Commission</span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[18px]">groups</span>
+<span><strong>850+</strong> Active JNU Buyers</span>
+</div>
+</div>
+</div>
+<!-- Two-Column Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- ================= LEFT COLUMN: FORM SECTIONS (8 COLS) ================= -->
+<div class="lg:col-span-8 flex flex-col gap-6" id="sell-form">
+<!-- SECTION 1: Photos & Media -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">1</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Product Photos &amp; Media</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">High-resolution photos from distinct angles sell 3x faster on campus.</p>
+</div>
+<span class="text-label-md font-label-md text-on-surface-variant bg-surface-container-low px-2 py-1 rounded">2 / 6 Uploaded</span>
+</div>
+<!-- Multi-Image Dropzone & Cards Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
+<!-- Uploaded Image 1 (Cover) -->
+<div class="relative group rounded-lg overflow-hidden border-2 border-primary-container bg-surface-container aspect-square">
+<img alt="Hercules Roadeo bicycle parked inside hostel corridor" class="w-full h-full object-cover" data-alt="Hercules Roadeo A50 red and black mountain bicycle parked in a university hostel corridor bathed in natural morning daylight. Clean condition, sharp spokes, dual disc brakes clearly visible, crisp realistic collegiate photo." id="preview-img-src" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4rSlRas4PlyZXVwvLTnlg5dDehBnWNRYxvDFM8SsYXakGuGjcO__7Ox4-vaFuo6703ocrTYLLiy_JJIihJf5iexgEIhBIDQiPspwCzqJ0X3ZdUJsGVyoH7lgRCSd35JdOkIlInmswrwmFZqXbGWSYf376xLe-Y_iuJFqhKXCZf_0S3Kb9ACQsoDPOFsD9pYi0IqGDY0Tlgn2kjardOt_BOweGpDxZwCL_16Yh1nIS1QBSoaA9sgLNlg"/>
+<div class="absolute top-2 left-2 bg-primary text-on-primary text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">
+                Cover Photo
+              </div>
+<div class="absolute inset-0 bg-inverse-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="p-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:scale-110 transition-transform" title="View Full" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-full bg-surface-container-lowest text-error hover:scale-110 transition-transform" title="Delete" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+<div class="absolute bottom-1 right-2 text-[10px] text-on-primary font-mono drop-shadow">1.8 MB</div>
+</div>
+<!-- Uploaded Image 2 -->
+<div class="relative group rounded-lg overflow-hidden border border-outline-variant bg-surface-container aspect-square">
+<img alt="Close-up of bicycle handlebar, shifters and bell" class="w-full h-full object-cover" data-alt="Close up photograph of Shimano gear shifters, alloy handlebar, and bell on a student commuter bicycle with subtle indoor fluorescent lighting, highlighting clean rubber grips and spotless condition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlR2SZvz25wQlyg7LY6ZCuR_2edgwGAZ6IhPwMqcnXLojrQzw67SJUy0-q1D-gLvdy0KHn3ZWOlCh7hmgDyU5yAVVo_9SblRgMFSugLt28Ul8mLIbXoh6ty6NS-gek1Ai9QyECq_KztmFJ5rbk8Ti2gOMK4Cq0_iylkNfABIOLlg4qd_Ni94GPXX0bK_y_XCZTyh2E_bYbtrn5xrngURMKEQ_ic3u5dZXA90Zx_78_YNDkElFN7HnUsA"/>
+<div class="absolute inset-0 bg-inverse-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="p-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:scale-110 transition-transform" title="Make Cover" type="button">
+<span class="material-symbols-outlined text-[16px]">star</span>
+</button>
+<button class="p-1.5 rounded-full bg-surface-container-lowest text-error hover:scale-110 transition-transform" title="Delete" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+<div class="absolute bottom-1 right-2 text-[10px] text-on-primary font-mono drop-shadow">1.2 MB</div>
+</div>
+<!-- Dropzone Trigger Slot -->
+<label class="border-2 border-dashed border-outline-variant hover:border-primary-container bg-surface-container-low/60 hover:bg-surface-container-low rounded-lg aspect-square flex flex-col items-center justify-center p-3 text-center cursor-pointer transition-colors group">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm group-hover:scale-105 transition-transform mb-1.5">
+<span class="material-symbols-outlined text-[20px]">add_photo_alternate</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-semibold">Upload Photo</span>
+<span class="text-[11px] text-on-surface-variant">or drag &amp; drop</span>
+<input accept="image/*" class="hidden" multiple="" type="file"/>
+</label>
+<!-- Empty Slot Guide -->
+<div class="border border-dashed border-outline-variant/60 rounded-lg aspect-square flex flex-col items-center justify-center p-3 text-center text-outline bg-surface-bright/50">
+<span class="material-symbols-outlined text-[22px] opacity-40 mb-1">photo_camera</span>
+<span class="text-[11px]">Rear / Accessories Angle</span>
+</div>
+</div>
+<!-- Photo Guidance Tip -->
+<div class="flex items-start gap-2 bg-surface-container-low p-3 rounded-lg border border-outline-variant">
+<span class="material-symbols-outlined text-primary text-[18px] flex-shrink-0 mt-0.5">lightbulb</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+<span class="font-semibold text-on-surface">Campus Tip:</span> Photograph any tire tread wear, textbook spine markings, or bill receipts. Transparency prevents failed handshakes at KC Market.
+            </p>
+</div>
+</section>
+<!-- SECTION 2: Basic Details & Category -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 shadow-sm">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">2</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Product Title &amp; School/Category</h2>
+</div>
+<div class="space-y-4">
+<!-- Title -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<label class="font-label-lg text-label-lg text-on-surface" for="title-input">Product Title <span class="text-error">*</span></label>
+<span class="text-label-sm font-label-sm text-on-surface-variant" id="char-counter">47 / 80</span>
+</div>
+<input class="w-full h-11 px-3.5 bg-surface-container-lowest text-on-surface text-body-lg rounded-lg border border-outline-variant focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all placeholder:text-outline" id="title-input" maxlength="80" placeholder="e.g. Symphony 35L Desert Cooler or Oxford Politics 2nd Ed." type="text" value="Hercules Roadeo A50 26-Inch Bicycle with Helmet"/>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-1">Mention brand, exact model, edition, or key specs for accurate campus search matching.</p>
+</div>
+<!-- Categories & Subcategories Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="font-label-lg text-label-lg text-on-surface block mb-1" for="category-select">Category <span class="text-error">*</span></label>
+<div class="relative">
+<select class="w-full h-11 px-3.5 pr-9 bg-surface-container-lowest text-on-surface text-body-md rounded-lg border border-outline-variant focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all appearance-none cursor-pointer" id="category-select">
+<option value="cycles">Cycles &amp; Commute</option>
+<option value="books">Books &amp; Study Material</option>
+<option value="coolers">Hostel Coolers &amp; Room Essentials</option>
+<option value="electronics">Electronics &amp; Gadgets</option>
+<option value="furniture">Study Chairs &amp; Folding Tables</option>
+<option value="lab">Lab Equipment &amp; Dissection Kits</option>
+<option value="winter">Winter Wear &amp; Campus Jackets</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<div>
+<label class="font-label-lg text-label-lg text-on-surface block mb-1" for="subcategory-input">Academic Centre / Sub-tag (Optional)</label>
+<input class="w-full h-11 px-3.5 bg-surface-container-lowest text-on-surface text-body-md rounded-lg border border-outline-variant focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all placeholder:text-outline" id="subcategory-input" placeholder="e.g. SIS / SSS / SPS / UGC-NET" type="text" value="Campus Mobility / Day Scholar"/>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Product Condition & Age Details -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 shadow-sm">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">3</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Product Condition &amp; Age ("How Old Product Is")</h2>
+</div>
+<!-- Product Age Radio Pills -->
+<div class="mb-5">
+<label class="font-label-lg text-label-lg text-on-surface block mb-2">Age of Product / Duration Used <span class="text-error">*</span></label>
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-2" id="age-selector">
+<button class="age-pill h-10 px-2 rounded-lg border border-outline-variant bg-surface-container-low text-on-surface-variant hover:border-primary text-label-md font-label-md flex items-center justify-center text-center transition-all" type="button">
+                &lt; 6 months
+              </button>
+<button class="age-pill active-pill h-10 px-2 rounded-lg border-2 border-primary bg-primary-fixed/30 text-primary font-bold text-label-md font-label-md flex items-center justify-center text-center transition-all" type="button">
+                6 mos - 1 yr
+              </button>
+<button class="age-pill h-10 px-2 rounded-lg border border-outline-variant bg-surface-container-low text-on-surface-variant hover:border-primary text-label-md font-label-md flex items-center justify-center text-center transition-all" type="button">
+                1 - 2 years
+              </button>
+<button class="age-pill h-10 px-2 rounded-lg border border-outline-variant bg-surface-container-low text-on-surface-variant hover:border-primary text-label-md font-label-md flex items-center justify-center text-center transition-all" type="button">
+                2+ years
+              </button>
+<button class="age-pill h-10 px-2 rounded-lg border border-outline-variant bg-surface-container-low text-on-surface-variant hover:border-primary text-label-md font-label-md flex items-center justify-center text-center transition-all col-span-2 sm:col-span-1" type="button">
+                Current Sem
+              </button>
+</div>
+</div>
+<!-- Item Condition Detailed Card Selector -->
+<div class="mb-5">
+<label class="font-label-lg text-label-lg text-on-surface block mb-2">Item Condition <span class="text-error">*</span></label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="condition-grid">
+<!-- Option: New -->
+<label class="condition-card relative flex items-start p-3 rounded-xl border border-outline-variant hover:border-primary cursor-pointer transition-all bg-surface-bright">
+<input class="mt-1 text-primary focus:ring-primary-container" name="condition" type="radio" value="New / Sealed"/>
+<div class="ml-3">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">New / Sealed</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary-fixed text-on-secondary-fixed">MINT</span>
+</div>
+<p class="text-label-md font-label-md text-on-surface-variant mt-0.5">Never opened or assembled. Original packing intact.</p>
+</div>
+</label>
+<!-- Option: Like New (Default selected) -->
+<label class="condition-card active-card relative flex items-start p-3 rounded-xl border-2 border-primary bg-primary-fixed/20 cursor-pointer transition-all">
+<input checked="" class="mt-1 text-primary focus:ring-primary-container" name="condition" type="radio" value="Like New"/>
+<div class="ml-3">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Like New (Mint)</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-container text-on-primary">POPULAR</span>
+</div>
+<p class="text-label-md font-label-md text-on-surface-variant mt-0.5">Barely used, zero mechanical defects or major scratches.</p>
+</div>
+</label>
+<!-- Option: Good -->
+<label class="condition-card relative flex items-start p-3 rounded-xl border border-outline-variant hover:border-primary cursor-pointer transition-all bg-surface-bright">
+<input class="mt-1 text-primary focus:ring-primary-container" name="condition" type="radio" value="Good"/>
+<div class="ml-3">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Good (Normal Wear)</span>
+</div>
+<p class="text-label-md font-label-md text-on-surface-variant mt-0.5">Fully functional, normal signs of regular semester use.</p>
+</div>
+</label>
+<!-- Option: Fair -->
+<label class="condition-card relative flex items-start p-3 rounded-xl border border-outline-variant hover:border-primary cursor-pointer transition-all bg-surface-bright">
+<input class="mt-1 text-primary focus:ring-primary-container" name="condition" type="radio" value="Fair"/>
+<div class="ml-3">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Fair / Functional</span>
+</div>
+<p class="text-label-md font-label-md text-on-surface-variant mt-0.5">Heavy aesthetic wear, but completely works. Priced to clear.</p>
+</div>
+</label>
+</div>
+</div>
+<!-- Description Textarea with Toolbar Hints -->
+<div class="mb-4">
+<div class="flex justify-between items-center mb-1">
+<label class="font-label-lg text-label-lg text-on-surface" for="description-input">Detailed Description <span class="text-error">*</span></label>
+<span class="text-label-sm font-label-sm text-on-surface-variant">State reason for sale</span>
+</div>
+<div class="border border-outline-variant rounded-lg overflow-hidden focus-within:border-primary-container focus-within:ring-2 focus-within:ring-primary-container/20">
+<!-- Formatting toolbar pills -->
+<div class="bg-surface-container-low px-3 py-1.5 border-b border-outline-variant flex items-center gap-2 text-on-surface-variant text-label-sm">
+<button class="hover:text-on-surface p-1 rounded font-bold" type="button">B</button>
+<button class="hover:text-on-surface p-1 rounded italic" type="button">I</button>
+<div class="h-4 w-px bg-outline-variant"></div>
+<button class="hover:text-on-surface p-1 rounded flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">format_list_bulleted</span>
+</button>
+<span class="text-outline text-[11px] ml-auto">Markdown supported</span>
+</div>
+<textarea class="w-full p-3 bg-surface-container-lowest text-on-surface text-body-md border-0 focus:ring-0 focus:outline-none placeholder:text-outline" id="description-input" placeholder="Mention reasons for selling (e.g. graduating this June, changing room). Mention if lock, bell, or original purchase bill is provided..." rows="4">Purchased during Monsoon semester 2023 for commute between Brahmaputra Hostel and SIS block. 21-speed Shimano gears shifting smoothly, dual mechanical disc brakes, brand new tube installed last month. Includes Decathlon helmet and wire number lock. Selling as completing M.Phil dissertation.</textarea>
+</div>
+</div>
+<!-- Additional Attribute Checkboxes -->
+<div>
+<label class="font-label-lg text-label-lg text-on-surface block mb-2">Item Features &amp; Inclusions</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-body-md text-on-surface">
+<label class="flex items-center gap-2 p-2 rounded hover:bg-surface-container-low cursor-pointer">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary-container" type="checkbox"/>
+<span>Includes Original Bill / Purchase Invoice</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded hover:bg-surface-container-low cursor-pointer">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary-container" type="checkbox"/>
+<span>Includes Accessories (Helmet &amp; Number Lock)</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded hover:bg-surface-container-low cursor-pointer">
+<input class="rounded border-outline-variant text-primary focus:ring-primary-container" type="checkbox"/>
+<span>Under Manufacturer Warranty</span>
+</label>
+<label class="flex items-center gap-2 p-2 rounded hover:bg-surface-container-low cursor-pointer">
+<input class="rounded border-outline-variant text-primary focus:ring-primary-container" type="checkbox"/>
+<span>Minor cosmetic marks / sticker decals present</span>
+</label>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Pricing & Negotiation -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 shadow-sm">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">4</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Pricing &amp; Negotiation</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+<!-- Selling Price -->
+<div>
+<label class="font-label-lg text-label-lg text-on-surface block mb-1" for="price-input">Your Selling Price (₹) <span class="text-error">*</span></label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none font-bold text-primary text-body-lg">
+                  ₹
+                </div>
+<input class="w-full h-11 pl-8 pr-3.5 bg-surface-container-lowest text-on-surface font-price-display text-price-display rounded-lg border border-outline-variant focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all" id="price-input" placeholder="0" type="number" value="4200"/>
+</div>
+</div>
+<!-- Original MRP -->
+<div>
+<label class="font-label-lg text-label-lg text-on-surface block mb-1" for="mrp-input">Original MRP / Purchased For (₹)</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none font-semibold text-on-surface-variant text-body-lg">
+                  ₹
+                </div>
+<input class="w-full h-11 pl-8 pr-3.5 bg-surface-container-lowest text-on-surface font-body-lg text-body-lg rounded-lg border border-outline-variant focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all" id="mrp-input" placeholder="0" type="number" value="11500"/>
+</div>
+<p class="text-label-sm font-label-sm text-secondary font-semibold mt-1" id="discount-calc">
+                Calculates: 63% off original retail price
+              </p>
+</div>
+</div>
+<!-- Price Type Segmented Buttons -->
+<div class="mb-4">
+<label class="font-label-lg text-label-lg text-on-surface block mb-1.5">Price Terms</label>
+<div class="inline-flex p-1 bg-surface-container-low rounded-lg border border-outline-variant w-full sm:w-auto">
+<button class="px-4 py-1.5 rounded-md font-label-md text-label-md font-semibold text-on-surface hover:text-primary transition-colors" type="button">
+                Fixed Price
+              </button>
+<button class="px-4 py-1.5 rounded-md font-label-md text-label-md font-bold bg-surface-container-lowest text-primary shadow-sm" type="button">
+                Negotiable for Hostellers
+              </button>
+<button class="px-4 py-1.5 rounded-md font-label-md text-label-md font-semibold text-on-surface hover:text-primary transition-colors" type="button">
+                Give Away (₹0 Free)
+              </button>
+</div>
+</div>
+<!-- Fair Price Intelligence Banner -->
+<div class="flex items-center gap-3 bg-secondary-fixed/30 border border-secondary-fixed p-3 rounded-lg text-on-surface">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+</div>
+<div class="flex-1">
+<div class="font-label-lg text-label-lg font-semibold text-secondary">Campus Valuation Benchmark</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Similar 26" geared cycles sold between <strong class="text-on-surface">₹3,800 – ₹4,600</strong> in JNU hostels this semester. Your price ₹4,200 is competitive!
+              </p>
+</div>
+</div>
+</section>
+<!-- SECTION 5: Campus Handover & Pickup Hubs -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 shadow-sm">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-label-sm text-label-sm font-bold">5</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Campus Handover &amp; Safe Pickup Hubs</h2>
+</div>
+<!-- Pickup Landmarks Chips -->
+<div class="mb-4">
+<label class="font-label-lg text-label-lg text-on-surface block mb-1.5">Preferred Campus Handshake Location <span class="text-error">*</span></label>
+<div class="flex flex-wrap gap-2" id="landmark-chips">
+<button class="hub-chip selected-chip px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>KC Market (Safe Exchange Hub)</span>
+</button>
+<button class="hub-chip px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md border border-outline-variant flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<span>Central Library Porch</span>
+</button>
+<button class="hub-chip px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md border border-outline-variant flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<span>Ganga Dhaba</span>
+</button>
+<button class="hub-chip px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md border border-outline-variant flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<span>Brahmaputra Gate</span>
+</button>
+<button class="hub-chip px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md border border-outline-variant flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<span>SIS / SSS Building</span>
+</button>
+<button class="hub-chip px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md border border-outline-variant flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">location_on</span>
+<span>Dakshinapuram</span>
+</button>
+</div>
+</div>
+<!-- Availability & Privacy settings -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+<div>
+<label class="font-label-lg text-label-lg text-on-surface block mb-1" for="availability-select">Availability Window</label>
+<select class="w-full h-11 px-3.5 bg-surface-container-lowest text-on-surface text-body-md rounded-lg border border-outline-variant focus:outline-none focus:border-primary-container" id="availability-select">
+<option selected="">Evenings after 5:00 PM</option>
+<option>Flexible / Between Lectures</option>
+<option>Weekends (Saturday &amp; Sunday)</option>
+<option>Mornings 8:00 AM - 11:00 AM</option>
+</select>
+</div>
+<div>
+<label class="font-label-lg text-label-lg text-on-surface block mb-1">Buyer Contact Preference</label>
+<div class="h-11 px-3 rounded-lg border border-outline-variant bg-surface-container-low flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">JNU In-App Chat Only</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed text-[11px] font-bold">Privacy Shield</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- ================= RIGHT COLUMN: STICKY PREVIEW & GUIDELINES (4 COLS) ================= -->
+<div class="lg:col-span-4 space-y-6 lg:sticky lg:top-20">
+<!-- LIVE SEARCH CARD PREVIEW -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-5 shadow-sm">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md font-bold uppercase tracking-wider text-primary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              Live Marketplace Card Preview
+            </span>
+<span class="text-[11px] text-outline">What buyers see</span>
+</div>
+<!-- Card Mockup (Level 1 Card from Design System) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden shadow-sm transition-transform hover:-translate-y-0.5 duration-200">
+<!-- Image Frame -->
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img alt="Hercules Roadeo A50 26-Inch Bicycle preview" class="w-full h-full object-cover" data-alt="Hercules Roadeo A50 mountain bicycle parked neatly outside university brick dormitory under pleasant sunny light. Crisp details, clean spokes and bike geometry, authentic campus product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl-SYjD1A28EGH1IAXHQ0UwDIiAiNWv4v3HKaheB4Kqj578xqWz4EnklPPDx4sXW-yDk5JsxPocKAz7F9KqxWloca-liHaaUKkOHBvCa9QNNtqgszLcDFyAyiryzh-j56HwodZKNnLh_90Iy6v6eGE9L8M1D37e1NzDCnesl6MUCeU23YSiEeue0sbYJ7OKJijI-ISznxFWbZ1iUYVGIMYPgfF9TnXnQ9713Pt0A7ZM0JauxwBFihtXw"/>
+<!-- Condition Badge -->
+<div class="absolute top-2.5 left-2.5 bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface text-label-sm font-label-sm font-semibold px-2 py-0.5 rounded-full border border-outline-variant/60 shadow-xs">
+                Like New (Mint)
+              </div>
+<!-- Campus Safe Hub Badge -->
+<div class="absolute bottom-2.5 left-2.5 bg-inverse-surface/85 backdrop-blur-sm text-inverse-on-surface text-[11px] font-medium px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] text-secondary-fixed">location_on</span>
+<span id="preview-hub">KC Market Safe Hub</span>
+</div>
+</div>
+<!-- Card Bottom Body -->
+<div class="p-3.5 flex flex-col gap-2">
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-1.5">
+<span class="font-price-display text-price-display font-bold text-on-surface" id="preview-price">₹4,200</span>
+<span class="text-label-sm font-label-sm text-outline line-through" id="preview-mrp">₹11,500</span>
+</div>
+<span class="text-label-sm font-label-sm font-bold text-secondary bg-secondary-container/40 px-1.5 py-0.5 rounded">
+                  63% off
+                </span>
+</div>
+<h3 class="font-headline-sm text-[15px] font-semibold text-on-surface line-clamp-2 leading-tight" id="preview-title">
+                Hercules Roadeo A50 26-Inch Bicycle with Helmet
+              </h3>
+<div class="pt-2 border-t border-outline-variant/60 flex items-center justify-between text-[11px] text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Aarav S. • Brahmaputra</span>
+</div>
+<span>Just now</span>
+</div>
+</div>
+</div>
+</div>
+<!-- JNU SAFE SELLING GUIDELINES CARD -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant p-5">
+<div class="flex items-center gap-2 mb-3 text-secondary">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">JNU Peer Safety Shield</h3>
+</div>
+<ul class="space-y-2.5 text-label-md font-label-md text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] flex-shrink-0 mt-0.5">check</span>
+<span><strong>Meet at Designated Hubs:</strong> Handover cycles &amp; coolers at daytime near KC Market or Central Library.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] flex-shrink-0 mt-0.5">check</span>
+<span><strong>Verify Student ID:</strong> Both parties are verified via JNU institutional email credentials.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] flex-shrink-0 mt-0.5">check</span>
+<span><strong>Inspect Before Cash:</strong> Let the buyer test ride or power test before accepting UPI payment.</span>
+</li>
+</ul>
+<div class="mt-4 pt-3 border-t border-outline-variant/70 flex items-center justify-between text-[11px] text-outline">
+<span>Dispute or queries?</span>
+<a class="text-primary font-semibold hover:underline" href="#">Read Campus Policy</a>
+</div>
+</div>
+<!-- FORM ACTIONS BAR (LEVEL 2 ELEVATION) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-4 shadow-sm flex flex-col gap-3">
+<button class="w-full h-11 bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm transition-all flex items-center justify-center gap-2 active:scale-[0.99]" onclick="publishListing()" type="button">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+<span>Publish Listing to Campus</span>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-10 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">save</span>
+<span>Save Draft</span>
+</button>
+<button class="h-10 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+<span>Preview Tab</span>
+</button>
+</div>
+<p class="text-[11px] text-center text-on-surface-variant">
+            By publishing, you agree to the <a class="text-primary underline" href="#">JNU Code of Conduct</a>.
+          </p>
+</div>
+</div>
+</div>
+</main>
+<!-- ================= SUCCESS TOAST NOTIFICATION ================= -->
+<div class="fixed bottom-6 right-6 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-lg flex items-center gap-3 border border-outline transition-all transform translate-y-24 opacity-0 pointer-events-none z-50" id="toast-success">
+<div class="w-7 h-7 rounded-full bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold">Listing Published!</h4>
+<p class="text-[12px] text-inverse-on-surface/80">Hercules Roadeo is now live for all JNU hostel scholars.</p>
+</div>
+</div>
+<!-- ================= FOOTER (ANCHOR COMPONENT) ================= -->
+<footer class="w-full bg-surface-container-low border-t border-outline-variant mt-16">
+<div class="w-full py-space-xl px-gutter-desktop max-w-[1280px] mx-auto">
+<!-- Top row of footer -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+<div class="md:col-span-2">
+<div class="flex items-center gap-2 mb-3">
+<div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">storefront</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">JNU Bazaar</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+            Dedicated peer-to-peer campus exchange network for Jawaharlal Nehru University students, scholars, and faculty. Institutional email verification required.
+          </p>
+<div class="mt-4 flex items-center gap-3 text-label-sm font-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Jawaharlal Nehru University, New Delhi 110067</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface mb-3">Explore &amp; Transact</h4>
+<ul class="space-y-2 font-label-md text-label-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Marketplace</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Categories</a></li>
+<li><a class="text-primary font-semibold" href="#">Sell on JNU Bazaar</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Campus Pickup Hubs</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface mb-3">Safety &amp; Trust</h4>
+<ul class="space-y-2 font-label-md text-label-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Student Safety &amp; Guidelines</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Help &amp; Support</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<!-- Copyright bottom row -->
+<div class="pt-6 border-t border-outline-variant/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-label-sm font-label-sm text-on-surface-variant">
+<p>© 2024 JNU Bazaar. Dedicated peer-to-peer campus exchange network for Jawaharlal Nehru University students, scholars, and faculty. Institutional email verification required.</p>
+<div class="flex items-center gap-4">
+<span class="inline-flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            Campus Server Status: Operational
+          </span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Inline Vanilla JS for Micro-Interactions & Real-Time Preview Sync -->
+<script>
+    // Live Title Sync & Character Counter
+    const titleInput = document.getElementById('title-input');
+    const previewTitle = document.getElementById('preview-title');
+    const charCounter = document.getElementById('char-counter');
+
+    titleInput.addEventListener('input', (e) => {
+      const val = e.target.value;
+      charCounter.textContent = `${val.length} / 80`;
+      previewTitle.textContent = val.trim().length > 0 ? val : 'Product title preview';
+    });
+
+    // Live Price Sync & Discount calculation
+    const priceInput = document.getElementById('price-input');
+    const mrpInput = document.getElementById('mrp-input');
+    const previewPrice = document.getElementById('preview-price');
+    const previewMrp = document.getElementById('preview-mrp');
+    const discountCalc = document.getElementById('discount-calc');
+
+    function updatePricing() {
+      const price = parseFloat(priceInput.value) || 0;
+      const mrp = parseFloat(mrpInput.value) || 0;
+
+      previewPrice.textContent = `₹${price.toLocaleString('en-IN')}`;
+      previewMrp.textContent = mrp > 0 ? `₹${mrp.toLocaleString('en-IN')}` : '';
+
+      if (mrp > price && price > 0) {
+        const off = Math.round(((mrp - price) / mrp) * 100);
+        discountCalc.textContent = `Calculates: ${off}% off original retail price`;
+      } else {
+        discountCalc.textContent = 'Calculates: Fair resale campus rate';
+      }
+    }
+
+    priceInput.addEventListener('input', updatePricing);
+    mrpInput.addEventListener('input', updatePricing);
+
+    // Age selector pills interaction
+    const agePills = document.querySelectorAll('.age-pill');
+    agePills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        agePills.forEach(p => {
+          p.classList.remove('border-2', 'border-primary', 'bg-primary-fixed/30', 'text-primary', 'font-bold');
+          p.classList.add('border-outline-variant', 'bg-surface-container-low', 'text-on-surface-variant');
+        });
+        pill.classList.remove('border-outline-variant', 'bg-surface-container-low', 'text-on-surface-variant');
+        pill.classList.add('border-2', 'border-primary', 'bg-primary-fixed/30', 'text-primary', 'font-bold');
+      });
+    });
+
+    // Handover Hub chips interaction
+    const hubChips = document.querySelectorAll('.hub-chip');
+    const previewHub = document.getElementById('preview-hub');
+    hubChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        hubChips.forEach(c => {
+          c.className = 'hub-chip px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container font-label-md text-label-md border border-outline-variant flex items-center gap-1.5';
+          const icon = c.querySelector('.material-symbols-outlined');
+          if (icon) {
+            icon.textContent = 'location_on';
+            icon.className = 'material-symbols-outlined text-[16px] text-outline';
+          }
+        });
+        chip.className = 'hub-chip selected-chip px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm';
+        const activeIcon = chip.querySelector('.material-symbols-outlined');
+        if (activeIcon) {
+          activeIcon.textContent = 'check_circle';
+          activeIcon.className = 'material-symbols-outlined text-[16px]';
+        }
+        const textSpan = chip.querySelector('span:last-child');
+        if (textSpan && previewHub) {
+          previewHub.textContent = textSpan.textContent;
+        }
+      });
+    });
+
+    // Toast Trigger on publish
+    function publishListing() {
+      const toast = document.getElementById('toast-success');
+      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 4000);
+    }
+  </script>
+</body></html>
